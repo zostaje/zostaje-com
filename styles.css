@@ -1367,10 +1367,11 @@ h3 {
   transform: translateY(0);
 }
 .mobile-menu-inner {
-  width: min(100%, 680px);
+  position: relative;
+  width: min(calc(100% - 24px), 680px);
   min-height: 100%;
   margin-inline: auto;
-  padding: 24px 28px 60px;
+  padding: 16px 0 60px;
 }
 .mobile-menu-top {
   display: flex;
@@ -1412,67 +1413,84 @@ h3 {
   transform: rotate(-45deg);
 }
 .mobile-primary-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 21px;
-  padding-bottom: 42px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
 }
 .mobile-primary-nav a {
   width: fit-content;
-  font-size: clamp(1.85rem, 8vw, 2.5rem);
-  font-weight: 650;
-  line-height: 1.15;
-}
-.mobile-primary-nav a:last-child {
-  color: var(--green-light);
+  padding: 4px 0;
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 .mobile-secondary-nav {
-  padding-top: 42px;
+  padding-top: 24px;
 }
 .mobile-secondary-nav > p,
 .mobile-language-panel > p {
+  margin-bottom: 8px;
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .mobile-secondary-nav > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px 24px;
+  gap: 0 24px;
 }
 .mobile-secondary-nav a,
 .mobile-secondary-nav button,
 .mobile-language-panel button {
   width: fit-content;
-  padding: 0;
+  padding: 4px 0;
   border: 0;
   background: transparent;
   color: var(--text);
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
   text-align: left;
 }
 .mobile-secondary-nav button:disabled {
   color: var(--text-muted);
 }
 .mobile-language-panel {
-  margin-top: 36px;
-  padding: 26px;
+  position: absolute;
+  z-index: 2;
+  top: 62px;
+  right: 50px;
+  width: 128px;
+  margin: 0;
+  padding: 5px;
   border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--surface);
+  border-radius: 8px;
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+}
+.mobile-language-panel > p {
+  display: none;
 }
 .mobile-language-panel button {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
+  justify-content: flex-start;
+  padding: 8px 9px;
+  border-radius: 6px;
+  font-size: 0.82rem;
 }
-.mobile-language-panel button:last-child {
-  border-bottom: 0;
+.mobile-language-panel button:hover {
+  background: var(--surface-soft);
 }
 body.menu-open {
   overflow: hidden;
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .mobile-primary-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 960px) {
