@@ -7,7 +7,41 @@
       name="description"
       content="Zostaje pomaga zrozumieć codzienne finanse i zobaczyć, ile naprawdę możesz wydać — bez arkuszy i finansowego żargonu."
     />
+    <meta
+      name="keywords"
+      content="finanse osobiste, budżet domowy, aplikacja finansowa, kontrola wydatków, planowanie budżetu, iOS, Zostaje"
+    />
+    <meta name="author" content="Zostaje" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#0f0f0f" />
+    <link rel="canonical" href="https://zostaje.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zostaje" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:url" content="https://zostaje.com/" />
+    <meta
+      property="og:title"
+      content="Zostaje — finanse, które da się zrozumieć"
+    />
+    <meta
+      property="og:description"
+      content="Zobacz, ile naprawdę możesz dziś wydać. Zostaje porządkuje wydatki, plany i nadchodzące płatności w jednym prostym widoku."
+    />
+    <meta property="og:image" content="https://zostaje.com/og-image.png" />
+    <meta
+      property="og:image:alt"
+      content="Zostaje — finanse, które da się zrozumieć"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Zostaje — finanse, które da się zrozumieć"
+    />
+    <meta
+      name="twitter:description"
+      content="Jedno spokojne miejsce do codziennych finansów."
+    />
+    <meta name="twitter:image" content="https://zostaje.com/og-image.png" />
     <title>Zostaje — finanse, które da się zrozumieć</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +50,45 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://zostaje.com/#organization",
+            "name": "Zostaje",
+            "url": "https://zostaje.com/",
+            "sameAs": ["https://github.com/zostaje"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://zostaje.com/#website",
+            "url": "https://zostaje.com/",
+            "name": "Zostaje",
+            "inLanguage": ["pl", "en"],
+            "publisher": { "@id": "https://zostaje.com/#organization" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://zostaje.com/#app",
+            "name": "Zostaje",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "iOS, macOS, Windows",
+            "description": "Aplikacja do codziennych finansów, która pokazuje, ile pieniędzy naprawdę możesz bezpiecznie wydać.",
+            "url": "https://zostaje.com/",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "PLN",
+              "description": "Bezpłatne pierwsze zamknięte demo"
+            },
+            "publisher": { "@id": "https://zostaje.com/#organization" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -539,7 +612,7 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div>
+        <div class="footer-about">
           <a
             class="brand footer-brand"
             href="#top"
@@ -558,6 +631,60 @@
             <span>LinkedIn · wkrótce</span>
             <span>X · wkrótce</span>
           </nav>
+          <div class="footer-ai">
+            <p class="footer-ai-heading">Zapytaj AI o Zostaje</p>
+            <div class="footer-ai-links">
+              <a
+                href="https://chatgpt.com/"
+                data-ai="chatgpt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M8 9.2 12 7l4 2.2v5.2L12 17l-4-2.6Z"></path>
+                </svg>
+                <span
+                  ><strong>ChatGPT</strong
+                  ><small>Pełny opis projektu</small></span
+                >
+              </a>
+              <a
+                href="https://claude.ai/new"
+                data-ai="claude"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3 4.5 19h15Z"></path>
+                  <path d="M9.2 14h5.6"></path>
+                </svg>
+                <span
+                  ><strong>Claude</strong
+                  ><small>Analiza z referencjami</small></span
+                >
+              </a>
+              <a
+                href="https://gemini.google.com/app"
+                data-ai="gemini"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2c.8 5.7 4.3 9.2 10 10-5.7.8-9.2 4.3-10 10-.8-5.7-4.3-9.2-10-10 5.7-.8 9.2-4.3 10-10Z"
+                  ></path>
+                </svg>
+                <span
+                  ><strong>Gemini</strong
+                  ><small>Prompt kopiowany automatycznie</small></span
+                >
+              </a>
+            </div>
+            <p class="footer-ai-note" aria-live="polite">
+              Gotowy prompt zawiera opis aplikacji i linki do źródeł.
+            </p>
+          </div>
           <details class="footer-language">
             <summary>
               <svg
@@ -588,20 +715,39 @@
         </div>
         <div class="footer-links">
           <div>
-            <strong>Produkt</strong><a href="#jak-dziala">Jak działa</a
-            ><a href="#funkcje">Funkcje</a><a href="#cennik">Cennik</a
-            ><a href="#pobierz">Pobierz</a>
+            <nav aria-label="Produkt">
+              <strong>Produkt</strong><a href="#jak-dziala">Jak działa</a
+              ><a href="#funkcje">Funkcje</a><a href="#cennik">Cennik</a
+              ><a href="#pobierz">Pobierz</a>
+            </nav>
+            <nav aria-label="Platformy">
+              <strong>Platformy</strong><span>iOS · w budowie</span
+              ><span>macOS · planowane</span><span>Windows · planowane</span>
+            </nav>
           </div>
           <div>
-            <strong>Projekt</strong
-            ><a href="https://github.com/zostaje" rel="noreferrer">GitHub</a
-            ><a href="#demo">Demo</a
-            ><a href="#bezpieczenstwo">Bezpieczeństwo</a>
+            <nav aria-label="Projekt">
+              <strong>Projekt</strong
+              ><a href="https://github.com/zostaje" rel="noreferrer">GitHub</a
+              ><a href="#demo">Demo</a
+              ><a href="#bezpieczenstwo">Bezpieczeństwo</a>
+            </nav>
+            <nav aria-label="Technologia">
+              <strong>Technologia</strong><span>Swift</span
+              ><span>Wspólny backend</span
+              ><span>Publiczne MCP · planowane</span>
+            </nav>
           </div>
           <div>
-            <strong>Kontakt</strong
-            ><a href="mailto:demo@zostaje.app">demo@zostaje.app</a
-            ><span>Polska</span>
+            <nav aria-label="Kontakt">
+              <strong>Kontakt</strong
+              ><a href="mailto:demo@zostaje.app">demo@zostaje.app</a
+              ><span>Polska</span>
+            </nav>
+            <nav aria-label="Informacje">
+              <strong>Informacje</strong><a href="#demo">Zamknięte demo</a
+              ><a href="#bezpieczenstwo">Prywatność danych</a>
+            </nav>
           </div>
         </div>
       </div>

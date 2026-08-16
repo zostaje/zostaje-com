@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f0f0f"/>
+  <rect x="72" y="72" width="72" height="72" rx="18" fill="none" stroke="#34d399" stroke-width="3" stroke-dasharray="7 6"/>
+  <text x="174" y="126" fill="#f5f5f5" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">Zostaje</text>
+  <text x="72" y="300" fill="#f5f5f5" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="700">Wiesz, ile zostaje.</text>
+  <text x="72" y="386" fill="#f5f5f5" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="700">Zanim miesiąc się skończy.</text>
+  <text x="72" y="490" fill="#a3a3a3" font-family="Inter, Arial, sans-serif" font-size="30">Proste, codzienne finanse bez arkuszy i żargonu.</text>
+  <rect x="72" y="538" width="248" height="8" rx="4" fill="#10b981"/>
+</svg>

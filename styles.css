@@ -1160,9 +1160,15 @@ h3 {
   padding: 112px 0 132px;
 }
 .footer-grid {
-  display: grid;
-  grid-template-columns: 270px 1fr;
-  gap: 140px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 96px;
+}
+.footer-about {
+  width: 280px;
+  margin-right: auto;
 }
 .footer-brand {
   margin-bottom: 26px;
@@ -1190,6 +1196,65 @@ h3 {
 }
 .footer-socials a:hover {
   color: var(--green-light);
+}
+.footer-ai {
+  margin: 28px 0;
+}
+.footer-ai-heading {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+.footer-ai-links {
+  display: grid;
+  gap: 5px;
+}
+.footer-ai-links a {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 9px;
+  color: var(--text);
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
+}
+.footer-ai-links a:hover {
+  background: var(--surface-raised);
+  color: var(--green-light);
+}
+.footer-ai-links svg {
+  width: 24px;
+  height: 24px;
+  padding: 3px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.footer-ai-links span,
+.footer-ai-links strong,
+.footer-ai-links small {
+  display: block;
+}
+.footer-ai-links strong {
+  font-size: 0.78rem;
+}
+.footer-ai-links small {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+.footer-ai-note {
+  margin: 9px 8px 0;
+  color: var(--text-muted);
+  font-size: 0.66rem;
+  line-height: 1.45;
 }
 .footer-language {
   position: relative;
@@ -1240,17 +1305,24 @@ h3 {
   background: #292929;
 }
 .footer-links {
+  width: min(100%, 610px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
+  margin-left: auto;
 }
 .footer-links div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-links nav {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
 .footer-links strong {
-  margin-bottom: 9px;
+  margin-bottom: 5px;
   color: var(--text-muted);
   font-size: 0.76rem;
   font-weight: 500;
@@ -1445,14 +1517,17 @@ body.menu-open {
     padding: 36px;
   }
   .footer-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 72px;
   }
   .footer-links {
     order: 1;
+    width: 100%;
+    margin-left: 0;
   }
-  .footer-grid > div:first-child {
+  .footer-about {
     order: 2;
+    width: min(100%, 340px);
   }
 }
 

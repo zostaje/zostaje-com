@@ -131,11 +131,42 @@ const translations = {
   "LinkedIn · wkrótce": "LinkedIn · coming soon",
   "X · wkrótce": "X · coming soon",
   "Śledź nas": "Follow us",
+  "Zapytaj AI o Zostaje": "Ask AI about Zostaje",
+  "Pełny opis projektu": "Full project overview",
+  "Analiza z referencjami": "Analysis with references",
+  "Prompt kopiowany automatycznie": "Prompt copied automatically",
+  "Gotowy prompt zawiera opis aplikacji i linki do źródeł.":
+    "The prepared prompt includes an app description and source links.",
   Produkt: "Product",
   Projekt: "Project",
   Platformy: "Platforms",
+  "iOS · w budowie": "iOS · in development",
+  "macOS · planowane": "macOS · planned",
+  "Windows · planowane": "Windows · planned",
+  Technologia: "Technology",
+  "Wspólny backend": "Shared backend",
+  "Publiczne MCP · planowane": "Public MCP · planned",
+  Informacje: "Information",
+  "Zamknięte demo": "Private demo",
+  "Prywatność danych": "Data privacy",
   Polska: "Poland",
 };
+
+const aiPrompts = {
+  pl: `Opowiedz mi jak najwięcej o aplikacji Zostaje. Zostaje to rozwijana aplikacja do codziennych finansów osobistych, która ma porządkować wydatki, plany i nadchodzące płatności oraz pokazywać prostą kwotę: ile użytkownik może dziś bezpiecznie wydać. Pierwsza wersja powstaje natywnie na iOS w Swift, a później planowane są lekkie aplikacje na macOS i Windows korzystające ze wspólnego backendu. Planowane jest również publiczne MCP, które pozwoli — za zgodą użytkownika — analizować wybrane dane w kompatybilnych asystentach AI. Aplikacja jest obecnie w budowie, a pierwsze zamknięte demo ma być bezpłatne. Sprawdź aktualne informacje na https://zostaje.com/ oraz w repozytoriach organizacji https://github.com/zostaje. Opisz szczegółowo problem, który rozwiązuje produkt, grupę docelową, sposób działania, funkcje, platformy, podejście do prywatności, planowane MCP, etap rozwoju i model cenowy. Oddziel wyraźnie fakty już opublikowane od planów i własnych wniosków. Cytuj konkretne źródła i podaj link przy każdej ważnej informacji. Jeśli czegoś nie da się potwierdzić, napisz to wprost.`,
+  en: `Tell me as much as possible about the Zostaje app. Zostaje is an app in development for everyday personal finances. It is intended to organize spending, plans and upcoming payments and show one simple amount: how much the user can safely spend today. The first version is being built natively for iOS in Swift, followed by planned lightweight macOS and Windows apps using a shared backend. A public MCP is also planned so users can, with explicit consent, analyze selected data in compatible AI assistants. The app is currently in development and its first private demo is intended to be free. Check the latest information at https://zostaje.com/ and in the repositories of https://github.com/zostaje. Explain in detail the problem the product solves, its target audience, how it works, features, platforms, privacy approach, planned MCP, development stage and pricing model. Clearly separate published facts from plans and your own inferences. Cite specific sources and include a link for every important claim. If something cannot be confirmed, say so explicitly.`,
+};
+
+function updateAiLinks(language) {
+  const prompt = aiPrompts[language];
+  const encodedPrompt = encodeURIComponent(prompt);
+
+  document.querySelector('[data-ai="chatgpt"]').href =
+    `https://chatgpt.com/?q=${encodedPrompt}&hints=search`;
+  document.querySelector('[data-ai="claude"]').href =
+    `https://claude.ai/new?q=${encodedPrompt}`;
+  document.querySelector('[data-ai="gemini"]').dataset.prompt = prompt;
+}
 
 const originalText = new WeakMap();
 const textWalker = document.createTreeWalker(
@@ -195,6 +226,23 @@ function applyLanguage(language) {
     language === "en"
       ? "Zostaje helps you understand everyday finances and see how much you can safely spend."
       : "Zostaje pomaga zrozumieć codzienne finanse i zobaczyć, ile naprawdę możesz wydać — bez arkuszy i finansowego żargonu.";
+  const socialTitle =
+    language === "en"
+      ? "Zostaje — finances you can understand"
+      : "Zostaje — finanse, które da się zrozumieć";
+  const socialDescription =
+    language === "en"
+      ? "See how much you can safely spend today. Zostaje brings spending, plans and upcoming payments into one simple view."
+      : "Zobacz, ile naprawdę możesz dziś wydać. Zostaje porządkuje wydatki, plany i nadchodzące płatności w jednym prostym widoku.";
+  document.querySelector('meta[property="og:title"]').content = socialTitle;
+  document.querySelector('meta[property="og:description"]').content =
+    socialDescription;
+  document.querySelector('meta[property="og:locale"]').content =
+    language === "en" ? "en_US" : "pl_PL";
+  document.querySelector('meta[name="twitter:title"]').content = socialTitle;
+  document.querySelector('meta[name="twitter:description"]').content =
+    socialDescription;
+  updateAiLinks(language);
   document
     .querySelector(".menu-toggle")
     .setAttribute(
@@ -280,6 +328,32 @@ try {
   savedLanguage = "pl";
 }
 applyLanguage(savedLanguage);
+
+document.querySelector('[data-ai="gemini"]').addEventListener("click", () => {
+  const geminiLink = document.querySelector('[data-ai="gemini"]');
+  const note = document.querySelector(".footer-ai-note");
+  if (!navigator.clipboard) {
+    note.textContent =
+      document.documentElement.lang === "en"
+        ? "Copy the prepared prompt from the page and paste it into Gemini."
+        : "Skopiuj przygotowany prompt ze strony i wklej go w Gemini.";
+    return;
+  }
+  navigator.clipboard
+    .writeText(geminiLink.dataset.prompt)
+    .then(() => {
+      note.textContent =
+        document.documentElement.lang === "en"
+          ? "Prompt copied. Paste it into Gemini to start the analysis."
+          : "Prompt skopiowany. Wklej go w Gemini, aby rozpocząć analizę.";
+    })
+    .catch(() => {
+      note.textContent =
+        document.documentElement.lang === "en"
+          ? "Copy the prepared prompt from the page and paste it into Gemini."
+          : "Skopiuj przygotowany prompt ze strony i wklej go w Gemini.";
+    });
+});
 
 const siteHeader = document.querySelector(".site-header");
 const updateHeader = () =>
