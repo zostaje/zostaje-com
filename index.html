@@ -9,6 +9,12 @@
     />
     <meta name="theme-color" content="#0d1210" />
     <title>Zostaje — finanse, które da się zrozumieć</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -24,24 +30,106 @@
         <nav class="main-nav" aria-label="Główna nawigacja">
           <a href="#jak-dziala">Jak działa</a>
           <a href="#funkcje">Funkcje</a>
-          <a href="#platformy">Platformy</a>
-          <a href="#bezpieczenstwo">Bezpieczeństwo</a>
+          <a href="#cennik">Cennik</a>
+          <a href="#pobierz">Pobierz</a>
         </nav>
 
-        <a class="button button-small button-outline" href="#demo"
-          >Zapisz się na demo</a
-        >
+        <div class="nav-actions">
+          <details class="language-menu">
+            <summary aria-label="Zmień język">
+              <span class="globe-icon" aria-hidden="true"></span>
+              <span class="current-language">PL</span>
+              <span class="chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="language-dropdown">
+              <button type="button" data-language="pl">
+                Polski <span>PL</span>
+              </button>
+              <button type="button" data-language="en">
+                English <span>EN</span>
+              </button>
+            </div>
+          </details>
+          <button
+            class="account-link"
+            type="button"
+            disabled
+            title="Konto będzie dostępne po uruchomieniu aplikacji"
+          >
+            Konto
+          </button>
+          <a class="button button-small button-outline" href="#demo"
+            >Zapisz się na demo</a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Otwórz menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </header>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-menu-inner">
+        <div class="mobile-menu-top">
+          <a class="brand" href="#top" aria-label="Zostaje — strona główna">
+            <span class="logo-placeholder" aria-hidden="true"></span
+            ><span>Zostaje</span>
+          </a>
+          <div class="mobile-menu-tools">
+            <button
+              class="mobile-language-toggle"
+              type="button"
+              aria-label="Zmień język"
+            >
+              <span class="globe-icon" aria-hidden="true"></span>
+            </button>
+            <button class="menu-close" type="button" aria-label="Zamknij menu">
+              <span></span><span></span>
+            </button>
+          </div>
+        </div>
+        <nav class="mobile-primary-nav" aria-label="Mobilna nawigacja">
+          <a href="#jak-dziala">Jak działa</a>
+          <a href="#funkcje">Funkcje</a>
+          <a href="#cennik">Cennik</a>
+          <a href="#pobierz">Pobierz</a>
+          <a href="#demo">Zapisz się na demo</a>
+        </nav>
+        <div class="mobile-secondary-nav">
+          <p>Dowiedz się więcej</p>
+          <div>
+            <a href="#bezpieczenstwo">Bezpieczeństwo</a>
+            <a href="https://github.com/zostaje" rel="noreferrer">GitHub</a>
+            <button type="button" disabled>Konto</button>
+            <a href="mailto:demo@zostaje.app">Kontakt</a>
+          </div>
+        </div>
+        <div class="mobile-language-panel" hidden>
+          <p>Język strony</p>
+          <button type="button" data-language="pl">
+            Polski <span>PL</span>
+          </button>
+          <button type="button" data-language="en">
+            English <span>EN</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <main id="main">
       <section class="hero" id="top">
         <div class="container hero-grid">
           <div class="hero-copy">
+            <h1>Wiesz, ile <em>zostaje.</em> Zanim miesiąc się skończy.</h1>
             <p class="status-pill">
               <span></span> Aplikacja jest w trakcie tworzenia
             </p>
-            <h1>Wiesz, ile <em>zostaje.</em> Zanim miesiąc się skończy.</h1>
             <p class="hero-lead">
               Jedno spokojne miejsce do codziennych finansów. Zostaje porządkuje
               wydatki, przypomina o planach i pokazuje prostą odpowiedź: ile
@@ -55,9 +143,6 @@
                 >Zobacz, jak to działa <span>↓</span></a
               >
             </div>
-            <p class="microcopy">
-              Najpierw iOS. Następnie lekka aplikacja na macOS i PC.
-            </p>
           </div>
 
           <div
@@ -107,7 +192,6 @@
 
       <section class="section intro" id="jak-dziala">
         <div class="container narrow-heading">
-          <p class="eyebrow">Mniej liczenia. Więcej spokoju.</p>
           <h2>Twoje finanse mają opowiadać prostą historię.</h2>
           <p>
             Zostaje zbiera ważne informacje i przekłada je na czytelny plan
@@ -147,7 +231,6 @@
       <section class="section feature-section" id="funkcje">
         <div class="container section-heading-row">
           <div>
-            <p class="eyebrow">Funkcje projektowane wokół Ciebie</p>
             <h2>
               Wystarczająco dużo, żeby pomagać. Wystarczająco prosto, żeby
               używać.
@@ -162,7 +245,6 @@
         <div class="container feature-grid">
           <article class="feature-card feature-large">
             <div class="feature-copy">
-              <span class="feature-kicker">Codzienny obraz</span>
               <h3>Kwota, która mówi więcej niż saldo.</h3>
               <p>
                 Zobacz pieniądze dostępne po odjęciu rachunków, celów i
@@ -207,7 +289,6 @@
 
           <article class="feature-card feature-wide">
             <div>
-              <span class="feature-kicker">Zostaje MCP</span>
               <h3>Twoje dane mogą pracować także z AI.</h3>
             </div>
             <p>
@@ -222,7 +303,6 @@
       <section class="section why-section">
         <div class="container why-grid">
           <div class="why-copy">
-            <p class="eyebrow">Dlaczego ma Ci pomóc</p>
             <h2>Bo dobre finanse nie powinny zajmować całego wieczoru.</h2>
           </div>
           <div class="benefit-list">
@@ -259,10 +339,31 @@
         </div>
       </section>
 
-      <section class="section platforms-section" id="platformy">
+      <section class="section pricing-section" id="cennik">
+        <div class="container pricing-grid">
+          <div>
+            <h2>Prosty cennik. Bez niespodzianek.</h2>
+            <p>
+              Pierwsze zamknięte demo będzie bezpłatne. Finalne plany i ceny
+              pokażemy przed publicznym startem, kiedy zakres aplikacji będzie
+              gotowy.
+            </p>
+          </div>
+          <article class="pricing-card">
+            <span class="pricing-status">Pierwsze demo</span>
+            <p class="pricing-value">0 zł</p>
+            <p>
+              Testuj pierwszą wersję i pomóż nam zdecydować, co powinno powstać
+              dalej.
+            </p>
+            <a class="button button-primary" href="#demo">Zapisz się na demo</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section platforms-section" id="pobierz">
         <div class="container platforms-grid">
           <div>
-            <p class="eyebrow">Jedna logika. Różne ekrany.</p>
             <h2>Najpierw w kieszeni. Później na biurku.</h2>
             <p class="platforms-lead">
               Zostaje powstaje najpierw jako natywna aplikacja na iPhone’a.
@@ -293,7 +394,6 @@
       <section class="section security-section" id="bezpieczenstwo">
         <div class="container security-panel">
           <div>
-            <p class="eyebrow">Bezpieczeństwo od początku</p>
             <h2>Twoje finanse nie są paliwem reklamowym.</h2>
           </div>
           <div class="security-copy">
@@ -313,7 +413,6 @@
       <section class="section demo-section" id="demo">
         <div class="container demo-panel">
           <div class="demo-copy">
-            <p class="eyebrow">Pierwsze demo</p>
             <h2>Zobacz Zostaje wcześniej.</h2>
             <p>
               Zapisz się, jeśli chcesz przetestować pierwszą wersję, przekazać
@@ -371,7 +470,8 @@
         <div class="footer-links">
           <div>
             <strong>Produkt</strong><a href="#jak-dziala">Jak działa</a
-            ><a href="#funkcje">Funkcje</a><a href="#platformy">Platformy</a>
+            ><a href="#funkcje">Funkcje</a><a href="#cennik">Cennik</a
+            ><a href="#pobierz">Pobierz</a>
           </div>
           <div>
             <strong>Projekt</strong
@@ -387,5 +487,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

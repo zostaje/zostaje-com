@@ -11,6 +11,7 @@ jasność, postęp i pieniądze pozostające pod kontrolą.
 | Rola                     | Kolor     | Zastosowanie                          |
 | ------------------------ | --------- | ------------------------------------- |
 | Tło główne               | `#0D1210` | Tło strony i aplikacji                |
+| Tło hero                 | `#404040` | Neutralne tło pierwszego ekranu       |
 | Powierzchnia             | `#141B17` | Karty i spokojne wydzielenia          |
 | Powierzchnia podniesiona | `#1A241F` | Ważne makiety i duże karty            |
 | Linia                    | `#2A3731` | Obramowania i separatory              |
@@ -28,8 +29,9 @@ Zieleni używamy oszczędnie: ma prowadzić wzrok, a nie wypełniać cały inter
 
 ## Typografia
 
-- Krój: `Inter` z bezpiecznym systemowym fallbackiem.
-- Nagłówki: mocne, zwarte, z ujemnym trackingiem; najważniejsza jest krótka myśl.
+- Krój użytkowy: `Inter` — nawigacja, tekst, formularze i kontrolki.
+- Krój finansowy: `DM Serif Display` — główne nagłówki i najważniejsze wartości pieniężne.
+- Nagłówki: wyraźne i spokojne; najważniejsza jest krótka myśl.
 - Tekst: 16–20 px, line-height około 1.55–1.65.
 - Etykiety: małe litery kapitalikowe, większy tracking, kolor akcentowy.
 - Język: prosty, bez obietnic bez pokrycia; mówimy „aplikacja powstaje”, dopóki nie jest dostępna.
