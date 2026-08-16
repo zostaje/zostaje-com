@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Pobierz Zostaje na iOS lub zapisz się na pierwsze demo. Sprawdź planowane wersje aplikacji na iPhone, macOS i Windows."
+      content="Wypróbuj interaktywne demo Zostaje — wpisz wydatek, plan, cel albo pytanie i zobacz bezpieczną kwotę oraz Mapę Konsekwencji."
     />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0f0f0f" />
-    <link rel="canonical" href="https://zostaje.com/download/" />
+    <link rel="canonical" href="https://zostaje.com/demo/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Zostaje" />
     <meta property="og:locale" content="pl_PL" />
-    <meta property="og:url" content="https://zostaje.com/download/" />
-    <meta
-      property="og:title"
-      content="Pobierz Zostaje — iOS, macOS i Windows"
-    />
+    <meta property="og:url" content="https://zostaje.com/demo/" />
+    <meta property="og:title" content="Demo Zostaje — finansowy notatnik" />
     <meta
       property="og:description"
-      content="Zostaje powstaje najpierw na iPhone’a. Zapisz się na pierwsze demo i sprawdź plan kolejnych platform."
+      content="Przetestuj finansową Skrzynkę i zobacz, jak jeden wpis zmienia Twój plan."
     />
     <meta property="og:image" content="https://zostaje.com/og-image.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>Pobierz Zostaje — iOS, macOS i Windows</title>
+    <title>Demo Zostaje — przetestuj finansowy notatnik</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,30 +28,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="demo.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Zostaje",
+        "name": "Zostaje — interaktywne demo",
         "applicationCategory": "FinanceApplication",
-        "operatingSystem": "iOS",
-        "url": "https://zostaje.com/download/",
-        "description": "Aplikacja do codziennych finansów, która pokazuje, ile można bezpiecznie wydać.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "PLN",
-          "availability": "https://schema.org/PreOrder",
-          "description": "Bezpłatne pierwsze zamknięte demo"
-        }
+        "operatingSystem": "Web demo",
+        "url": "https://zostaje.com/demo/",
+        "isAccessibleForFree": true,
+        "description": "Lokalne demo finansowej Skrzynki, bezpiecznej kwoty i Mapy Konsekwencji Zostaje."
       }
     </script>
   </head>
   <body
-    data-title-pl="Pobierz Zostaje — iOS, macOS i Windows"
-    data-title-en="Download Zostaje — iOS, macOS and Windows"
-    data-description-pl="Pobierz Zostaje na iOS lub zapisz się na pierwsze demo. Sprawdź planowane wersje aplikacji na iPhone, macOS i Windows."
-    data-description-en="Download Zostaje for iOS or join the first demo. See the roadmap for iPhone, macOS and Windows."
+    data-title-pl="Demo Zostaje — przetestuj finansowy notatnik"
+    data-title-en="Zostaje Demo — try the financial notebook"
+    data-description-pl="Wypróbuj interaktywne demo Zostaje — wpisz wydatek, plan, cel albo pytanie i zobacz bezpieczną kwotę oraz Mapę Konsekwencji."
+    data-description-en="Try the interactive Zostaje demo: add an expense, plan, goal or question and see your safe-to-spend amount and Consequence Map."
   >
     <a
       class="skip-link"
@@ -66,10 +57,7 @@
     >
     <header class="site-header">
       <div class="container nav-wrap">
-        <a
-          class="brand"
-          href="../index.html"
-          aria-label="Zostaje — strona główna"
+        <a class="brand" href="../index.html"
           ><span class="logo-placeholder" aria-hidden="true"></span
           ><span>Zostaje</span></a
         >
@@ -83,11 +71,13 @@
           <a href="../index.html#funkcje" data-pl="Funkcje" data-en="Features"
             >Funkcje</a
           >
-          <a href="../demo/index.html">Demo</a>
+          <a href="index.html">Demo</a>
           <a href="../pricing/index.html" data-pl="Cennik" data-en="Pricing"
             >Cennik</a
           >
-          <a href="index.html" data-pl="Pobierz" data-en="Download">Pobierz</a>
+          <a href="../download/index.html" data-pl="Pobierz" data-en="Download"
+            >Pobierz</a
+          >
         </nav>
         <div class="nav-right">
           <details class="language-menu">
@@ -100,8 +90,9 @@
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M2 12h20"></path>
                 <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
-                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path></svg
-              ><svg
+                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+              </svg>
+              <svg
                 class="language-chevron"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -164,8 +155,9 @@
                 <path d="M2 12h20"></path>
                 <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
                 <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
-              </svg></button
-            ><button class="menu-close" type="button" aria-label="Zamknij menu">
+              </svg>
+            </button>
+            <button class="menu-close" type="button" aria-label="Zamknij menu">
               <span></span><span></span>
             </button>
           </div>
@@ -176,13 +168,18 @@
             data-pl="Jak działa"
             data-en="How it works"
             >Jak działa</a
-          ><a href="../index.html#funkcje" data-pl="Funkcje" data-en="Features"
+          >
+          <a href="../index.html#funkcje" data-pl="Funkcje" data-en="Features"
             >Funkcje</a
-          ><a href="../demo/index.html">Demo</a
-          ><a href="../pricing/index.html" data-pl="Cennik" data-en="Pricing"
+          >
+          <a href="index.html">Demo</a>
+          <a href="../pricing/index.html" data-pl="Cennik" data-en="Pricing"
             >Cennik</a
-          ><a href="index.html" data-pl="Pobierz" data-en="Download">Pobierz</a
-          ><a
+          >
+          <a href="../download/index.html" data-pl="Pobierz" data-en="Download"
+            >Pobierz</a
+          >
+          <a
             href="../index.html#demo"
             data-pl="Zapisz się na demo"
             data-en="Join the demo"
@@ -216,82 +213,185 @@
         </div>
       </div>
     </div>
+
     <main class="subpage-main" id="main">
-      <section class="subpage-hero">
+      <section class="subpage-hero demo-lab-hero">
         <div class="container subpage-hero-copy">
-          <p class="subpage-kicker" data-pl="Pobierz" data-en="Download">
-            Pobierz
-          </p>
+          <p class="subpage-kicker">Demo</p>
           <h1
-            data-pl="Najpierw iPhone. Później Twoje biurko."
-            data-en="iPhone first. Your desktop next."
+            data-pl="Wpisz jedną myśl. Zobacz, co zmienia."
+            data-en="Capture one thought. See what it changes."
           >
-            Najpierw iPhone. Później Twoje biurko.
+            Wpisz jedną myśl. Zobacz, co zmienia.
           </h1>
           <p
             class="subpage-lead"
-            data-pl="Zostaje powstaje najpierw jako natywna aplikacja iOS w Swift. Wersje na macOS i Windows pojawią się w kolejnym etapie, z tym samym kontem i danymi."
-            data-en="Zostaje is being built first as a native iOS app in Swift. macOS and Windows versions will follow, using the same account and data."
+            data-pl="To działające lokalnie demo finansowej Skrzynki Zostaje. Nie zakłada konta, nie wysyła wpisów na serwer i nie wymaga formularza księgowego."
+            data-en="This is a local demo of the Zostaje financial Inbox. It creates no account, sends no entries to a server and requires no accounting form."
           >
-            Zostaje powstaje najpierw jako natywna aplikacja iOS w Swift. Wersje
-            na macOS i Windows pojawią się w kolejnym etapie, z tym samym kontem
-            i danymi.
+            To działające lokalnie demo finansowej Skrzynki Zostaje. Nie zakłada
+            konta, nie wysyła wpisów na serwer i nie wymaga formularza
+            księgowego.
           </p>
-          <div class="subpage-actions">
-            <a
-              class="button button-primary"
-              href="../index.html#demo"
-              data-pl="Zapisz się na demo iOS"
-              data-en="Join the iOS demo"
-              >Zapisz się na demo iOS</a
-            ><a
-              class="text-link"
-              href="../help/index.html"
-              data-pl="Sprawdź pomoc"
-              data-en="Visit help"
-              >Sprawdź pomoc</a
-            >
+        </div>
+      </section>
+      <section class="demo-lab">
+        <p
+          class="container demo-notice"
+          data-pl="Używaj wyłącznie przykładowych danych. To demo produktu, nie porada finansowa."
+          data-en="Use sample data only. This is a product demo, not financial advice."
+        >
+          Używaj wyłącznie przykładowych danych. To demo produktu, nie porada
+          finansowa.
+        </p>
+        <div class="container">
+          <div class="demo-app">
+            <div class="demo-app-bar">
+              <p data-pl="Finansowa Skrzynka" data-en="Financial Inbox">
+                Finansowa Skrzynka
+              </p>
+              <span
+                class="demo-local-badge"
+                data-pl="Działa lokalnie"
+                data-en="Runs locally"
+                >Działa lokalnie</span
+              >
+            </div>
+            <div class="demo-workspace">
+              <div class="demo-compose">
+                <h2
+                  data-pl="Co chcesz zapamiętać?"
+                  data-en="What do you want to remember?"
+                >
+                  Co chcesz zapamiętać?
+                </h2>
+                <p
+                  data-pl="Wydatek, przyszła płatność, cel, pytanie albo luźna myśl."
+                  data-en="An expense, future payment, goal, question or loose thought."
+                >
+                  Wydatek, przyszła płatność, cel, pytanie albo luźna myśl.
+                </p>
+                <form class="demo-entry-form" id="demo-entry-form">
+                  <label class="visually-hidden" for="demo-entry-input"
+                    >Wpis finansowy</label
+                  >
+                  <textarea
+                    id="demo-entry-input"
+                    required
+                    maxlength="500"
+                    placeholder="Np. McDonald's 24,50 zł"
+                  ></textarea>
+                  <div class="demo-form-actions">
+                    <small
+                      data-pl="Oryginalny tekst zawsze zostaje zachowany."
+                      data-en="The original text is always preserved."
+                      >Oryginalny tekst zawsze zostaje zachowany.</small
+                    ><button
+                      class="button button-primary"
+                      type="submit"
+                      data-pl="Dodaj do Skrzynki"
+                      data-en="Add to Inbox"
+                    >
+                      Dodaj do Skrzynki
+                    </button>
+                  </div>
+                </form>
+                <div
+                  class="demo-examples"
+                  role="group"
+                  aria-label="Przykładowe wpisy"
+                >
+                  <button
+                    class="demo-example"
+                    type="button"
+                    data-example="McDonald's 24,50 zł"
+                  >
+                    McDonald's 24,50 zł
+                  </button>
+                  <button
+                    class="demo-example"
+                    type="button"
+                    data-example="Ubezpieczenie 780 zł za tydzień"
+                  >
+                    Ubezpieczenie 780 zł za tydzień
+                  </button>
+                  <button
+                    class="demo-example"
+                    type="button"
+                    data-example="Chcę odłożyć 5000 zł na wakacje"
+                  >
+                    Chcę odłożyć 5000 zł na wakacje
+                  </button>
+                  <button
+                    class="demo-example"
+                    type="button"
+                    data-example="Czy stać mnie na rower za 3200 zł?"
+                  >
+                    Czy stać mnie na rower za 3200 zł?
+                  </button>
+                </div>
+                <div class="demo-result" id="demo-result" hidden>
+                  <p
+                    class="demo-result-label"
+                    data-pl="Zostaje rozpoznało"
+                    data-en="Zostaje recognized"
+                  >
+                    Zostaje rozpoznało
+                  </p>
+                  <h3 id="demo-result-title">Wpis</h3>
+                  <p id="demo-result-copy"></p>
+                  <div class="demo-tags" id="demo-result-tags"></div>
+                </div>
+              </div>
+              <aside class="demo-side">
+                <div class="demo-safe-card">
+                  <p
+                    class="demo-safe-label"
+                    data-pl="Możesz bezpiecznie wydać dzisiaj"
+                    data-en="You can safely spend today"
+                  >
+                    Możesz bezpiecznie wydać dzisiaj
+                  </p>
+                  <p class="demo-safe-value" id="demo-safe-value"></p>
+                  <p class="demo-safe-detail" id="demo-safe-detail"></p>
+                </div>
+                <div class="demo-map" role="img" aria-label="Mapa Konsekwencji">
+                  <span class="demo-node demo-node-entry" id="demo-map-entry"
+                    >Nowy wpis</span
+                  ><span class="demo-node demo-node-safe" id="demo-map-safe"
+                    >Bezpiecznie dziś</span
+                  ><span class="demo-node demo-node-plan" id="demo-map-plan"
+                    >Plan i cele</span
+                  >
+                </div>
+                <div class="demo-inbox">
+                  <div class="demo-inbox-header">
+                    <p
+                      class="demo-inbox-label"
+                      data-pl="Twoja Skrzynka"
+                      data-en="Your Inbox"
+                    >
+                      Twoja Skrzynka
+                    </p>
+                    <button
+                      class="demo-reset"
+                      id="demo-reset"
+                      type="button"
+                      data-pl="Resetuj demo"
+                      data-en="Reset demo"
+                    >
+                      Resetuj demo
+                    </button>
+                  </div>
+                  <ul class="demo-entry-list" id="demo-entry-list"></ul>
+                </div>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
-      <section class="subpage-content">
-        <div class="container subpage-grid">
-          <article class="subpage-card is-active">
-            <span
-              class="platform-status"
-              data-pl="W budowie"
-              data-en="In development"
-              >W budowie</span
-            >
-            <h2>iOS</h2>
-            <p
-              data-pl="Natywna aplikacja Swift projektowana do szybkiego, codziennego sprawdzania finansów. Pierwsze wydanie będzie dostępne w zamkniętym demie."
-              data-en="A native Swift app designed for quick daily finance checks. The first release will be available through a private demo."
-            >
-              Natywna aplikacja Swift projektowana do szybkiego, codziennego
-              sprawdzania finansów. Pierwsze wydanie będzie dostępne w
-              zamkniętym demie.
-            </p>
-          </article>
-          <article class="subpage-card">
-            <span
-              class="platform-status"
-              data-pl="Następny etap"
-              data-en="Next stage"
-              >Następny etap</span
-            >
-            <h2>macOS + Windows</h2>
-            <p
-              data-pl="Lekkie aplikacje komputerowe do szerszego planowania i analizy. Data premiery nie została jeszcze ogłoszona."
-              data-en="Lightweight desktop apps for broader planning and analysis. A release date has not been announced yet."
-            >
-              Lekkie aplikacje komputerowe do szerszego planowania i analizy.
-              Data premiery nie została jeszcze ogłoszona.
-            </p>
-          </article>
-        </div>
-      </section>
     </main>
+
     <footer class="site-footer subpage-footer">
       <div class="container footer-grid">
         <div class="footer-about">
@@ -302,9 +402,17 @@
           <p class="footer-follow" data-pl="Śledź nas" data-en="Follow us">
             Śledź nas
           </p>
-          <nav class="footer-socials" aria-label="Media społecznościowe">
-            <a href="https://github.com/zostaje">GitHub</a
-            ><a href="https://x.com/zostaje_app">X · @zostaje_app</a>
+          <nav
+            class="footer-socials"
+            aria-label="Media społecznościowe w stopce"
+          >
+            <a href="https://github.com/zostaje" rel="noreferrer">GitHub</a
+            ><a
+              href="https://x.com/zostaje_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              >X · @zostaje_app</a
+            >
           </nav>
           <div class="footer-ai">
             <p
@@ -389,7 +497,11 @@
                 <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
                 <path d="M12 2a15.3 15.3 0 0 0 0 20"></path></svg
               ><span class="footer-language-name">Polski</span
-              ><svg class="language-chevron" viewBox="0 0 24 24">
+              ><svg
+                class="language-chevron"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
                 <path d="m6 9 6 6 6-6"></path>
               </svg>
             </summary>
@@ -409,38 +521,42 @@
                 data-pl="Jak działa"
                 data-en="How it works"
                 >Jak działa</a
-              ><a href="../demo/index.html">Demo</a
+              ><a
+                href="../index.html#funkcje"
+                data-pl="Funkcje"
+                data-en="Features"
+                >Funkcje</a
+              ><a href="index.html">Demo</a
               ><a
                 href="../pricing/index.html"
                 data-pl="Cennik"
                 data-en="Pricing"
                 >Cennik</a
-              ><a href="index.html" data-pl="Pobierz" data-en="Download"
+              ><a
+                href="../download/index.html"
+                data-pl="Pobierz"
+                data-en="Download"
                 >Pobierz</a
               >
             </nav>
             <nav aria-label="Platformy">
-              <strong data-pl="Platformy" data-en="Platforms">Platformy</strong>
-              <span data-pl="iOS · w budowie" data-en="iOS · in development"
+              <strong data-pl="Platformy" data-en="Platforms">Platformy</strong
+              ><span data-pl="iOS · w budowie" data-en="iOS · in development"
                 >iOS · w budowie</span
-              >
-              <span data-pl="macOS · planowane" data-en="macOS · planned"
+              ><span data-pl="macOS · planowane" data-en="macOS · planned"
                 >macOS · planowane</span
-              >
-              <span data-pl="Windows · planowane" data-en="Windows · planned"
+              ><span data-pl="Windows · planowane" data-en="Windows · planned"
                 >Windows · planowane</span
               >
             </nav>
           </div>
           <div>
             <nav aria-label="Projekt">
-              <strong data-pl="Projekt" data-en="Project">Projekt</strong>
-              <a href="https://github.com/zostaje">GitHub</a>
-              <a href="../developers/index.html">Developers</a>
-              <a href="../demo/index.html" data-pl="Demo" data-en="Demo"
-                >Demo</a
-              >
-              <a
+              <strong data-pl="Projekt" data-en="Project">Projekt</strong
+              ><a href="https://github.com/zostaje" rel="noreferrer">GitHub</a
+              ><a href="../developers/index.html">Developers</a
+              ><a href="../index.html#demo">Demo iOS</a
+              ><a
                 href="../index.html#bezpieczenstwo"
                 data-pl="Bezpieczeństwo"
                 data-en="Security"
@@ -450,12 +566,10 @@
             <nav aria-label="Technologia">
               <strong data-pl="Technologia" data-en="Technology"
                 >Technologia</strong
-              >
-              <span>Swift</span>
-              <span data-pl="Opcjonalna chmura" data-en="Optional cloud"
+              ><span>Swift</span
+              ><span data-pl="Opcjonalna chmura" data-en="Optional cloud"
                 >Opcjonalna chmura</span
-              >
-              <span
+              ><span
                 data-pl="Publiczne MCP · planowane"
                 data-en="Public MCP · planned"
                 >Publiczne MCP · planowane</span
@@ -471,17 +585,14 @@
             <nav aria-label="Informacje">
               <strong data-pl="Informacje" data-en="Information"
                 >Informacje</strong
-              >
-              <a href="../help/index.html" data-pl="Pomoc" data-en="Help"
+              ><a href="../help/index.html" data-pl="Pomoc" data-en="Help"
                 >Pomoc</a
-              >
-              <a
+              ><a
                 href="../index.html#demo"
                 data-pl="Zamknięte demo"
                 data-en="Private demo"
                 >Zamknięte demo</a
-              >
-              <a
+              ><a
                 href="../index.html#bezpieczenstwo"
                 data-pl="Prywatność danych"
                 data-en="Data privacy"
@@ -493,5 +604,6 @@
       </div>
     </footer>
     <script src="../subpage.js"></script>
+    <script src="demo.js"></script>
   </body>
 </html>

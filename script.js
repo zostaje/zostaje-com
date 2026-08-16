@@ -2,6 +2,7 @@ const translations = {
   "Przejdź do treści": "Skip to content",
   "Jak działa": "How it works",
   Funkcje: "Features",
+  Demo: "Demo",
   Cennik: "Pricing",
   Pobierz: "Download",
   Konto: "Account",
@@ -17,6 +18,7 @@ const translations = {
   "Jedno spokojne miejsce do codziennych finansów. Zostaje porządkuje wydatki, przypomina o planach i pokazuje prostą odpowiedź: ile naprawdę możesz dziś wydać.":
     "One calm place for your everyday finances. Zostaje organizes spending, keeps plans in view and gives you a simple answer: how much you can safely spend today.",
   "Dołącz do pierwszego demo": "Join the first demo",
+  "Wypróbuj demo w przeglądarce": "Try the web demo",
   "Zobacz, jak to działa": "See how it works",
   Dzisiaj: "Today",
   "Możesz bezpiecznie wydać": "Safe to spend",
@@ -28,7 +30,8 @@ const translations = {
   Prosto: "Simple",
   "bez finansowego żargonu": "without financial jargon",
   "W jednym miejscu": "In one place",
-  "ten sam obraz na każdym urządzeniu": "the same picture on every device",
+  "lokalnie za darmo, chmura opcjonalnie":
+    "free and local, with optional cloud",
   "Pod Twoją kontrolą": "Under your control",
   "jasne zasady dostępu do danych": "clear rules for data access",
   "Twoje finanse mają opowiadać prostą historię.":
@@ -58,14 +61,14 @@ const translations = {
   "Plan bez arkusza": "A plan without spreadsheets",
   "Ustal limity i cele zwykłym językiem. Postęp zobaczysz bez ręcznego formatowania tabel.":
     "Set limits and goals in plain language. Track progress without formatting tables by hand.",
-  "Wydatki w kontekście": "Spending in context",
-  "Nie tylko lista transakcji. Zobacz, co zmieniło się w Twoim planie i dlaczego.":
-    "More than a transaction list. See what changed in your plan and why.",
+  "Mapa Konsekwencji": "Consequence Map",
+  "Każdy wpis pokazuje, co zmienia: bezpieczną kwotę, cel, zobowiązanie albo decyzję, która jeszcze czeka.":
+    "Every entry shows what it changes: your safe amount, a goal, a commitment or a decision still waiting.",
   Zakupy: "Groceries",
   Transport: "Transport",
   "Twoje dane mogą pracować także z AI.": "Your data can work with AI too.",
-  "Planowane publiczne narzędzie MCP pozwoli połączyć Zostaje z kompatybilnym asystentem, np. ChatGPT, i analizować wybrane dane na jasno określonych zasadach. To Ty zdecydujesz, co udostępniasz.":
-    "The planned public MCP tool will connect Zostaje with a compatible assistant such as ChatGPT and analyze selected data under clear rules. You decide what to share.",
+  "Planowane publiczne MCP pozwoli analizować wybrane dane lokalnie albo przez świadomy, ograniczony dostęp w chmurze. To Ty zdecydujesz, co udostępniasz i na jak długo.":
+    "The planned public MCP will analyze selected data locally or through explicit, limited cloud access. You decide what to share and for how long.",
   "Bo dobre finanse nie powinny zajmować całego wieczoru.":
     "Because healthy finances should not take all evening.",
   "Dostępne dzisiaj": "Available today",
@@ -104,8 +107,8 @@ const translations = {
     "Test the first version and help us decide what should come next.",
   "Najpierw w kieszeni. Później na biurku.":
     "First in your pocket. Then on your desk.",
-  "Zostaje powstaje najpierw jako natywna aplikacja na iPhone’a. Kolejnym krokiem będzie lekka wersja na macOS i Windows — z tym samym kontem, danymi i sposobem działania.":
-    "Zostaje starts as a native iPhone app. Next comes a lightweight macOS and Windows version—with the same account, data and experience.",
+  "Zostaje powstaje najpierw jako natywna aplikacja na iPhone’a, działająca bez konta. Kolejnym krokiem będzie lekka wersja na macOS i Windows oraz opcjonalna, szyfrowana synchronizacja.":
+    "Zostaje starts as a native iPhone app that works without an account. Next comes a lightweight macOS and Windows version with optional encrypted sync.",
   "W budowie": "In development",
   "Natywna aplikacja Swift, projektowana do szybkiego codziennego użycia.":
     "A native Swift app designed for quick everyday use.",
@@ -114,8 +117,8 @@ const translations = {
     "A lightweight desktop app for broader planning and analysis.",
   "Twoje finanse nie są paliwem reklamowym.":
     "Your finances are not advertising fuel.",
-  "Projektujemy Zostaje tak, aby dostęp do danych był czytelny, ograniczony i możliwy do cofnięcia. Integracje — również MCP — mają działać wyłącznie za Twoją zgodą.":
-    "We are designing Zostaje so data access is clear, limited and revocable. Integrations—including MCP—will work only with your consent.",
+  "Darmowa wersja zapisuje dane lokalnie i nie wymaga konta. Chmura jest opcjonalna, a synchronizowane wpisy są szyfrowane przed opuszczeniem urządzenia. Integracje — również MCP — działają wyłącznie za Twoją zgodą.":
+    "The free version stores data locally and requires no account. Cloud is optional, and synced entries are encrypted before leaving the device. Integrations, including MCP, work only with your consent.",
   "Szczegóły techniczne i polityka prywatności pojawią się przed publicznym startem.":
     "Technical details and the privacy policy will be published before launch.",
   "Zobacz Zostaje wcześniej.": "See Zostaje early.",
@@ -141,7 +144,7 @@ const translations = {
   "macOS · planowane": "macOS · planned",
   "Windows · planowane": "Windows · planned",
   Technologia: "Technology",
-  "Wspólny backend": "Shared backend",
+  "Opcjonalna chmura": "Optional cloud",
   "Publiczne MCP · planowane": "Public MCP · planned",
   Informacje: "Information",
   Pomoc: "Help",
