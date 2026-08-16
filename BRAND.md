@@ -11,9 +11,9 @@ jasność, postęp i pieniądze pozostające pod kontrolą.
 | Rola                     | Kolor     | Zastosowanie                          |
 | ------------------------ | --------- | ------------------------------------- |
 | Tło główne               | `#0F0F0F` | Tło całej strony i każdej sekcji      |
-| Powierzchnia             | `#141B17` | Karty i spokojne wydzielenia          |
-| Powierzchnia podniesiona | `#1A241F` | Ważne makiety i duże karty            |
-| Linia                    | `#2A3731` | Obramowania i separatory              |
+| Powierzchnia             | `#171717` | Karty i spokojne wydzielenia          |
+| Powierzchnia podniesiona | `#202020` | Ważne makiety i duże karty            |
+| Linia                    | `#343434` | Obramowania i separatory              |
 | Tekst główny             | `#F2F5F3` | Nagłówki i kluczowe treści            |
 | Tekst pomocniczy         | `#A8B3AD` | Akapity i opisy                       |
 | Tekst wyciszony          | `#6F7C75` | Metadane i informacje trzeciego planu |
