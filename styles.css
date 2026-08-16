@@ -108,7 +108,7 @@ h2,
   min-height: 72px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
   transition: min-height 180ms ease;
 }
 .site-header.is-scrolled .nav-wrap {
@@ -119,7 +119,7 @@ h2,
   align-items: center;
   gap: 12px;
   font-weight: 760;
-  font-size: 1.2rem;
+  font-size: 1.26rem;
   letter-spacing: -0.02em;
 }
 .brand > span:last-child {
@@ -134,12 +134,38 @@ h2,
   border-radius: 9px;
   background: var(--surface);
 }
-.main-nav {
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-left {
+  gap: 15px;
+}
+.nav-right {
+  gap: 6px;
+  margin-left: auto;
+}
+.nav-socials {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.nav-socials a:hover {
+  color: var(--text);
+}
+.nav-socials span {
+  cursor: default;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 3px;
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 .main-nav a {
@@ -153,12 +179,6 @@ h2,
 .main-nav a:focus-visible {
   background: #292929;
   color: var(--text);
-}
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: auto;
 }
 .language-menu {
   position: relative;
@@ -230,7 +250,7 @@ h2,
   border: 0;
   background: transparent;
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 650;
 }
 .account-link:disabled {
@@ -1366,9 +1386,10 @@ body.menu-open {
   .main-nav {
     display: none;
   }
-  .nav-actions > .language-menu,
-  .nav-actions > .account-link,
-  .nav-actions > .button {
+  .nav-left > .nav-socials,
+  .nav-left > .language-menu,
+  .nav-right > .account-link,
+  .nav-right > .button {
     display: none;
   }
   .menu-toggle {

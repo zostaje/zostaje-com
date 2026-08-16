@@ -211,7 +211,17 @@ function applyLanguage(language) {
     .querySelector(".footer-socials")
     .setAttribute(
       "aria-label",
-      language === "en" ? "Social media" : "Media społecznościowe",
+      language === "en"
+        ? "Social media in footer"
+        : "Media społecznościowe w stopce",
+    );
+  document
+    .querySelector(".nav-socials")
+    .setAttribute(
+      "aria-label",
+      language === "en"
+        ? "Social media in header"
+        : "Media społecznościowe w nagłówku",
     );
   try {
     localStorage.setItem("zostaje-language", language);

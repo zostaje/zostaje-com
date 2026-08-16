@@ -22,19 +22,18 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="Zostaje — strona główna">
-          <span class="logo-placeholder" aria-hidden="true"></span>
-          <span>Zostaje</span>
-        </a>
-
-        <nav class="main-nav" aria-label="Główna nawigacja">
-          <a href="#jak-dziala">Jak działa</a>
-          <a href="#funkcje">Funkcje</a>
-          <a href="#cennik">Cennik</a>
-          <a href="#pobierz">Pobierz</a>
-        </nav>
-
-        <div class="nav-actions">
+        <div class="nav-left">
+          <a class="brand" href="#top" aria-label="Zostaje — strona główna">
+            <span class="logo-placeholder" aria-hidden="true"></span>
+            <span>Zostaje</span>
+          </a>
+          <nav
+            class="nav-socials"
+            aria-label="Media społecznościowe w nagłówku"
+          >
+            <a href="https://github.com/zostaje" rel="noreferrer">GitHub</a>
+            <span title="Instagram — wkrótce">Instagram</span>
+          </nav>
           <details class="language-menu">
             <summary aria-label="Zmień język">
               <span class="language-globe" aria-hidden="true">🌐</span>
@@ -50,6 +49,15 @@
               </button>
             </div>
           </details>
+        </div>
+
+        <div class="nav-right">
+          <nav class="main-nav" aria-label="Główna nawigacja">
+            <a href="#jak-dziala">Jak działa</a>
+            <a href="#funkcje">Funkcje</a>
+            <a href="#cennik">Cennik</a>
+            <a href="#pobierz">Pobierz</a>
+          </nav>
           <button
             class="account-link"
             type="button"
@@ -534,7 +542,10 @@
             <span>Zostaje</span>
           </a>
           <p class="footer-follow">Śledź nas</p>
-          <nav class="footer-socials" aria-label="Media społecznościowe">
+          <nav
+            class="footer-socials"
+            aria-label="Media społecznościowe w stopce"
+          >
             <a href="https://github.com/zostaje" rel="noreferrer">GitHub</a>
             <span>Instagram · wkrótce</span>
             <span>LinkedIn · wkrótce</span>
