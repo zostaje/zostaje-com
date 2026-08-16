@@ -166,26 +166,31 @@ h2,
   position: relative;
 }
 .language-menu summary {
-  width: 42px;
-  min-height: 38px;
+  width: auto;
+  min-height: 36px;
   display: grid;
-  grid-template-columns: 18px 12px;
+  grid-template-columns: 16px 12px;
   place-content: center;
   align-items: center;
-  gap: 2px;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
+  gap: 4px;
+  margin-right: 8px;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 10%);
   color: var(--text-secondary);
   cursor: pointer;
   list-style: none;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
 }
 .language-menu summary::-webkit-details-marker {
   display: none;
 }
 .language-menu[open] summary,
 .language-menu summary:hover {
-  border-color: var(--green);
+  background: #262626;
   color: var(--text);
 }
 .language-globe,
@@ -200,6 +205,10 @@ h2,
 .language-globe {
   width: 18px;
   height: 18px;
+}
+.language-menu .language-globe {
+  width: 16px;
+  height: 16px;
 }
 .language-chevron {
   width: 12px;
