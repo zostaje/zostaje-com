@@ -18,7 +18,7 @@
   --radius-md: 22px;
   --radius-lg: 34px;
   --shadow: 0 28px 80px rgb(0 0 0 / 32%);
-  --container: 1180px;
+  --container: 1120px;
 }
 
 * {
@@ -68,11 +68,11 @@ h2,
 }
 
 .container {
-  width: min(calc(100% - 40px), var(--container));
+  width: min(calc(100% - 32px), var(--container));
   margin-inline: auto;
 }
 .section {
-  padding: 132px 0;
+  padding: 96px 0;
 }
 
 .skip-link {
@@ -104,15 +104,15 @@ h2,
 }
 
 .nav-wrap {
-  width: min(calc(100% - 40px), 1080px);
-  min-height: 78px;
+  width: min(calc(100% - 32px), var(--container));
+  min-height: 72px;
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 28px;
   transition: min-height 180ms ease;
 }
 .site-header.is-scrolled .nav-wrap {
-  min-height: 66px;
+  min-height: 62px;
 }
 .brand {
   display: inline-flex;
@@ -137,10 +137,22 @@ h2,
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
   color: var(--text-secondary);
   font-size: 0.93rem;
   font-weight: 600;
+}
+.main-nav a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  background: #292929;
+  color: var(--text);
 }
 .nav-actions {
   display: flex;
@@ -240,13 +252,8 @@ h2,
   display: block;
   background: var(--text);
 }
-.main-nav a:hover,
-.main-nav a:focus-visible {
-  color: var(--text);
-}
-
 .button {
-  min-height: 52px;
+  min-height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -305,7 +312,7 @@ input:focus-visible {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 104px 0 120px;
+  padding: 72px 0 88px;
   background: var(--bg);
 }
 .hero::before {
@@ -316,7 +323,7 @@ input:focus-visible {
   display: grid;
   grid-template-columns: 1.03fr 0.97fr;
   align-items: center;
-  gap: 74px;
+  gap: 52px;
 }
 .hero-copy {
   max-width: 580px;
@@ -350,7 +357,7 @@ p {
 }
 h1 {
   margin-bottom: 28px;
-  font-size: clamp(3rem, 5.2vw, 5rem);
+  font-size: clamp(2.6rem, 4.2vw, 4rem);
   line-height: 0.98;
   letter-spacing: -0.035em;
 }
@@ -373,7 +380,7 @@ h1 em {
 }
 .hero-visual {
   position: relative;
-  min-height: 600px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,8 +388,8 @@ h1 em {
 .hero-visual::before {
   content: "";
   position: absolute;
-  width: 430px;
-  height: 430px;
+  width: 360px;
+  height: 360px;
   border: 1px solid var(--line);
   border-radius: 50%;
   box-shadow:
@@ -392,8 +399,8 @@ h1 em {
 .balance-card {
   position: relative;
   z-index: 2;
-  width: min(100%, 440px);
-  padding: 34px;
+  width: min(100%, 400px);
+  padding: 28px;
   border: 1px solid #34473e;
   border-radius: var(--radius-lg);
   background: var(--surface-raised);
@@ -421,12 +428,12 @@ h1 em {
   font-size: 0.72rem;
 }
 .balance-label {
-  margin: 58px 0 6px;
+  margin: 42px 0 6px;
   color: var(--text-secondary);
 }
 .balance-value {
   margin-bottom: 28px;
-  font-size: clamp(3.5rem, 6vw, 5.4rem);
+  font-size: clamp(2.8rem, 4.4vw, 4rem);
   line-height: 1;
   letter-spacing: -0.06em;
   font-weight: 780;
@@ -462,12 +469,12 @@ h1 em {
   z-index: 4;
   right: -25px;
   bottom: 72px;
-  width: 330px;
+  width: 300px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 13px;
-  padding: 18px;
+  padding: 15px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: #101713;
@@ -516,12 +523,12 @@ h1 em {
   grid-template-columns: repeat(3, 1fr);
 }
 .trust-grid p {
-  min-height: 126px;
+  min-height: 96px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 24px 38px;
+  padding: 18px 28px;
   border-right: 1px solid var(--line);
 }
 .trust-grid p:first-child {
@@ -537,24 +544,24 @@ h1 em {
 
 h2 {
   margin-bottom: 28px;
-  font-size: clamp(2.7rem, 5vw, 5rem);
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
 }
 h3 {
   margin-bottom: 12px;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   line-height: 1.25;
   letter-spacing: -0.025em;
 }
 .narrow-heading {
   max-width: 900px;
-  margin-bottom: 64px;
+  margin-bottom: 46px;
 }
 .narrow-heading > p:last-child {
   max-width: 760px;
   color: var(--text-secondary);
-  font-size: 1.2rem;
+  font-size: 1.08rem;
 }
 .steps-grid {
   display: grid;
@@ -562,11 +569,11 @@ h3 {
   gap: 18px;
 }
 .step-card {
-  min-height: 300px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 34px;
+  padding: 27px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface);
@@ -603,8 +610,8 @@ h3 {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: end;
-  gap: 100px;
-  margin-bottom: 68px;
+  gap: 64px;
+  margin-bottom: 48px;
 }
 .section-heading-row h2 {
   max-width: 760px;
@@ -621,9 +628,9 @@ h3 {
   gap: 20px;
 }
 .feature-card {
-  min-height: 390px;
+  min-height: 320px;
   overflow: hidden;
-  padding: 36px;
+  padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface);
@@ -634,17 +641,17 @@ h3 {
 }
 .feature-large {
   grid-column: 1 / -1;
-  min-height: 510px;
+  min-height: 420px;
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   align-items: center;
-  gap: 58px;
-  padding: 58px;
+  gap: 42px;
+  padding: 42px;
   background: var(--surface-raised);
 }
 .feature-large h3 {
   max-width: 500px;
-  font-size: clamp(2.1rem, 4vw, 3.8rem);
+  font-size: clamp(1.7rem, 2.6vw, 2.5rem);
 }
 .mini-panel {
   padding: 18px 28px;
@@ -680,7 +687,7 @@ h3 {
   height: 48px;
   display: grid;
   place-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 54px;
   border: 1px solid var(--line);
   border-radius: 13px;
   color: var(--green-light);
@@ -732,7 +739,7 @@ h3 {
   min-height: auto;
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: 58px;
+  gap: 40px;
   align-items: center;
   border-color: #2f5b47;
 }
@@ -744,12 +751,12 @@ h3 {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
   align-items: center;
-  gap: 80px;
+  gap: 56px;
 }
 .why-content h2 {
   max-width: 620px;
-  margin-bottom: 52px;
-  font-size: clamp(2.35rem, 4.2vw, 4rem);
+  margin-bottom: 36px;
+  font-size: clamp(2rem, 3.1vw, 2.85rem);
 }
 .benefit-list {
   display: grid;
@@ -760,7 +767,7 @@ h3 {
   display: grid;
   grid-template-columns: 44px 1fr;
   gap: 18px;
-  padding: 22px;
+  padding: 17px;
   border: 1px solid transparent;
   border-radius: 16px;
   background: transparent;
@@ -791,16 +798,16 @@ h3 {
 }
 .benefit-title {
   margin-bottom: 6px;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 .benefit-description {
   color: var(--text-secondary);
-  font-size: 0.94rem;
+  font-size: 0.88rem;
 }
 .benefit-visual {
   position: relative;
-  min-height: 600px;
+  min-height: 500px;
   overflow: hidden;
   border: 1px solid #315a47;
   border-radius: var(--radius-lg);
@@ -809,8 +816,8 @@ h3 {
 }
 .benefit-scene {
   position: absolute;
-  inset: 54px;
-  padding: 36px;
+  inset: 38px;
+  padding: 28px;
   border-radius: 24px;
   background: var(--surface);
   opacity: 0;
@@ -841,9 +848,9 @@ h3 {
   font-size: 0.86rem;
 }
 .scene-amount {
-  margin: 58px 0 25px;
+  margin: 42px 0 22px;
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: clamp(4rem, 7vw, 6rem);
+  font-size: clamp(3rem, 4.8vw, 4rem);
   line-height: 1;
 }
 .scene-amount small {
@@ -933,7 +940,7 @@ h3 {
 .rhythm-score {
   margin: 42px 0 0;
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
   line-height: 1;
   text-align: center;
 }
@@ -945,7 +952,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 0.72fr;
   align-items: center;
-  gap: 100px;
+  gap: 64px;
 }
 .pricing-grid > div > p {
   max-width: 650px;
@@ -953,7 +960,7 @@ h3 {
   font-size: 1.12rem;
 }
 .pricing-card {
-  padding: 42px;
+  padding: 32px;
   border: 1px solid #315a47;
   border-radius: var(--radius-lg);
   background: var(--surface-raised);
@@ -969,7 +976,7 @@ h3 {
 }
 .pricing-value {
   margin: 34px 0 10px;
-  font-size: 4.6rem;
+  font-size: 3.2rem;
   line-height: 1;
 }
 .pricing-card > p:not(.pricing-value) {
@@ -983,7 +990,7 @@ h3 {
 .platforms-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: 64px;
 }
 .platforms-lead {
   max-width: 600px;
@@ -995,8 +1002,8 @@ h3 {
   gap: 16px;
 }
 .platform-list article {
-  min-height: 230px;
-  padding: 32px;
+  min-height: 190px;
+  padding: 26px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface);
@@ -1015,7 +1022,7 @@ h3 {
 }
 .platform-status {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 34px;
   font:
     750 0.72rem ui-monospace,
     monospace;
@@ -1026,9 +1033,9 @@ h3 {
 .security-panel {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 100px;
+  gap: 64px;
   align-items: end;
-  padding: 70px;
+  padding: 48px;
   border: 1px solid #305846;
   border-radius: var(--radius-lg);
   background: var(--surface-raised);
@@ -1054,9 +1061,9 @@ h3 {
 .demo-panel {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 90px;
+  gap: 60px;
   align-items: center;
-  padding: 70px;
+  padding: 48px;
   border-radius: var(--radius-lg);
   background: var(--green);
   color: white;
@@ -1068,7 +1075,7 @@ h3 {
   color: rgb(255 255 255 / 80%);
 }
 .demo-form {
-  padding: 30px;
+  padding: 24px;
   border-radius: 20px;
   border: 1px solid rgb(255 255 255 / 14%);
   background: var(--surface);
@@ -1113,12 +1120,12 @@ h3 {
 }
 
 .site-footer {
-  padding: 82px 0;
+  padding: 60px 0;
 }
 .footer-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: 80px;
+  gap: 56px;
 }
 .footer-brand {
   margin-bottom: 17px;
@@ -1309,13 +1316,13 @@ body.menu-open {
   .security-panel,
   .demo-panel {
     grid-template-columns: 1fr;
-    gap: 56px;
+    gap: 40px;
   }
   .hero {
     padding-top: 76px;
   }
   .hero-visual {
-    min-height: 540px;
+    min-height: 460px;
   }
   .trust-grid {
     grid-template-columns: 1fr;
@@ -1337,11 +1344,11 @@ body.menu-open {
     grid-template-columns: 1fr;
   }
   .benefit-visual {
-    min-height: 560px;
+    min-height: 480px;
   }
   .security-panel,
   .demo-panel {
-    padding: 50px;
+    padding: 36px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1350,19 +1357,19 @@ body.menu-open {
 
 @media (max-width: 680px) {
   .container {
-    width: min(calc(100% - 28px), var(--container));
+    width: min(calc(100% - 24px), var(--container));
   }
   .section {
-    padding: 88px 0;
+    padding: 68px 0;
   }
   .nav-wrap {
     min-height: 68px;
   }
   h1 {
-    font-size: clamp(2.75rem, 13vw, 3.8rem);
+    font-size: clamp(2.5rem, 11vw, 3.35rem);
   }
   h2 {
-    font-size: clamp(2.45rem, 12vw, 3.6rem);
+    font-size: clamp(2.1rem, 9.5vw, 3rem);
   }
   .hero-actions {
     align-items: stretch;
@@ -1375,10 +1382,10 @@ body.menu-open {
     justify-content: center;
   }
   .hero-visual {
-    min-height: 470px;
+    min-height: 420px;
   }
   .balance-card {
-    padding: 25px;
+    padding: 22px;
   }
   .floating-note {
     right: -2px;
@@ -1395,23 +1402,23 @@ body.menu-open {
   .feature-large,
   .feature-wide {
     grid-column: auto;
-    padding: 30px;
+    padding: 24px;
   }
   .feature-card {
-    padding: 30px;
+    padding: 24px;
   }
   .feature-icon {
     margin-bottom: 52px;
   }
   .why-content h2 {
-    font-size: clamp(2.2rem, 11vw, 3.2rem);
+    font-size: clamp(2rem, 9vw, 2.75rem);
   }
   .benefit-item {
     grid-template-columns: 32px 1fr;
     padding: 18px 14px;
   }
   .benefit-visual {
-    min-height: 500px;
+    min-height: 440px;
   }
   .benefit-scene {
     inset: 18px;
@@ -1419,18 +1426,18 @@ body.menu-open {
   }
   .scene-amount {
     margin-top: 42px;
-    font-size: 4.2rem;
+    font-size: 3.5rem;
   }
   .scene-budget {
     grid-template-columns: 82px 1fr 38px;
     gap: 10px;
   }
   .rhythm-score {
-    font-size: 4rem;
+    font-size: 3.3rem;
   }
   .security-panel,
   .demo-panel {
-    padding: 34px 24px;
+    padding: 26px 20px;
   }
   .input-row {
     flex-direction: column;

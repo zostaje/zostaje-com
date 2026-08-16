@@ -39,7 +39,8 @@ Zaznaczenie tekstu używa zieleni głównej `#16A36A`, bez zmiany koloru liter.
 ## Kształt i odstępy
 
 - Promienie: 12 px dla kontrolek, 22 px dla kart, 34 px dla dużych paneli.
-- Sekcje desktopowe: zwykle 120–140 px pionowego oddechu.
+- Maksymalna szerokość treści: 1120 px, z niewielkim bezpiecznym marginesem na mobile.
+- Sekcje desktopowe: zwykle około 96 px pionowego oddechu; mobile około 68 px.
 - Karty mają cienką, spokojną linię zamiast ciężkiego cienia.
 - Cień stosujemy tylko do makiet lub elementów unoszących się nad układem.
 - Nawigacja nie ma linii w stanie początkowym; po przewinięciu lekko się obniża i pokazuje separator.
