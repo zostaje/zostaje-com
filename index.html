@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -37,8 +37,23 @@
         <div class="nav-right">
           <details class="language-menu">
             <summary aria-label="Zmień język">
-              <span class="language-globe" aria-hidden="true">🌐</span>
-              <span class="chevron" aria-hidden="true">⌄</span>
+              <svg
+                class="language-globe"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+              </svg>
+              <svg
+                class="language-chevron"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
             </summary>
             <div class="language-dropdown">
               <button type="button" data-language="pl">Polski</button>
@@ -82,7 +97,16 @@
               type="button"
               aria-label="Zmień język"
             >
-              <span class="language-globe" aria-hidden="true">🌐</span>
+              <svg
+                class="language-globe"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+              </svg>
             </button>
             <button class="menu-close" type="button" aria-label="Zamknij menu">
               <span></span><span></span>
@@ -536,9 +560,24 @@
           </nav>
           <details class="footer-language">
             <summary>
-              <span class="language-globe" aria-hidden="true">🌐</span>
+              <svg
+                class="language-globe"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+              </svg>
               <span class="footer-language-name">Polski</span>
-              <span class="chevron" aria-hidden="true">⌄</span>
+              <svg
+                class="language-chevron"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
             </summary>
             <div>
               <button type="button" data-language="pl">Polski</button>

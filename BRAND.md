@@ -12,11 +12,11 @@ jasność, postęp i pieniądze pozostające pod kontrolą.
 | ------------------------ | --------- | ------------------------------------- |
 | Tło główne               | `#0F0F0F` | Tło całej strony i każdej sekcji      |
 | Powierzchnia             | `#171717` | Karty i spokojne wydzielenia          |
-| Powierzchnia podniesiona | `#202020` | Ważne makiety i duże karty            |
-| Linia                    | `#343434` | Obramowania i separatory              |
-| Tekst główny             | `#F2F5F3` | Nagłówki i kluczowe treści            |
-| Tekst pomocniczy         | `#A8B3AD` | Akapity i opisy                       |
-| Tekst wyciszony          | `#6F7C75` | Metadane i informacje trzeciego planu |
+| Powierzchnia podniesiona | `#262626` | Ważne makiety i duże karty            |
+| Linia                    | `#404040` | Obramowania i separatory              |
+| Tekst główny             | `#EEEEEE` | Nagłówki i kluczowe treści            |
+| Tekst pomocniczy         | `#D4D4D4` | Akapity i opisy                       |
+| Tekst wyciszony          | `#A3A3A3` | Metadane i informacje trzeciego planu |
 | Zieleń główna            | `#16A36A` | CTA, aktywne elementy i postęp        |
 | Zieleń hover             | `#128257` | Stan hover przycisków                 |
 | Zieleń akcentowa         | `#5DDBA3` | Linki, etykiety i krótkie wyróżnienia |
@@ -25,20 +25,19 @@ jasność, postęp i pieniądze pozostające pod kontrolą.
 | Błąd                     | `#FF6B6B` | Błędy i negatywne zmiany              |
 
 Zieleni używamy oszczędnie: ma prowadzić wzrok, a nie wypełniać cały interfejs.
-Zaznaczenie tekstu używa zieleni głównej `#16A36A`, bez zmiany koloru liter.
+Zaznaczenie tekstu używa zieleni głównej `#16A36A` z kryciem 30%, bez zmiany koloru liter.
 
 ## Typografia
 
-- Krój użytkowy: `Inter` — nawigacja, tekst, formularze i kontrolki.
-- Krój finansowy: `DM Serif Display` — główne nagłówki i najważniejsze wartości pieniężne.
-- Nagłówki: wyraźne i spokojne; najważniejsza jest krótka myśl.
-- Tekst: 16–20 px, line-height około 1.55–1.65.
+- Krój: `Inter` — nawigacja, tekst, formularze, nagłówki i wartości pieniężne.
+- Nagłówki: `Inter` SemiBold, zwarty line-height i tracking `-0.02em`.
+- Tekst: 16–20 px, bazowy line-height `1.5`.
 - Etykiety: małe litery kapitalikowe, większy tracking, kolor akcentowy.
 - Język: prosty, bez obietnic bez pokrycia; mówimy „aplikacja powstaje”, dopóki nie jest dostępna.
 
 ## Kształt i odstępy
 
-- Promienie: 12 px dla kontrolek, 22 px dla kart, 34 px dla dużych paneli.
+- Promienie: 8 px dla kontrolek, 12 px dla kart, 16 px dla dużych paneli.
 - Maksymalna szerokość treści: 1120 px, z niewielkim bezpiecznym marginesem na mobile.
 - Sekcje desktopowe: zwykle około 96 px pionowego oddechu; mobile około 68 px.
 - Karty mają cienką, spokojną linię zamiast ciężkiego cienia.
