@@ -10,8 +10,7 @@ jasność, postęp i pieniądze pozostające pod kontrolą.
 
 | Rola                     | Kolor     | Zastosowanie                          |
 | ------------------------ | --------- | ------------------------------------- |
-| Tło główne               | `#0D1210` | Tło strony i aplikacji                |
-| Tło hero                 | `#404040` | Neutralne tło pierwszego ekranu       |
+| Tło główne               | `#0F0F0F` | Tło całej strony i każdej sekcji      |
 | Powierzchnia             | `#141B17` | Karty i spokojne wydzielenia          |
 | Powierzchnia podniesiona | `#1A241F` | Ważne makiety i duże karty            |
 | Linia                    | `#2A3731` | Obramowania i separatory              |
