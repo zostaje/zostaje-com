@@ -189,20 +189,21 @@ h2,
   font-size: 0.94rem;
   line-height: 1;
 }
-.current-language {
-  font-size: 0.7rem;
-  font-weight: 750;
-}
 .chevron {
   font-size: 0.9rem;
   transform: translateY(-2px);
+  transition: transform 150ms ease;
+}
+.language-menu[open] .chevron,
+.footer-language[open] .chevron {
+  transform: translateY(1px) rotate(180deg);
 }
 .language-dropdown {
   position: absolute;
   top: calc(100% + 9px);
   right: 0;
-  width: 164px;
-  padding: 6px;
+  width: 118px;
+  padding: 5px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--surface-raised);
@@ -211,8 +212,8 @@ h2,
 .language-dropdown button {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 8px 9px;
+  justify-content: flex-start;
+  padding: 7px 8px;
   border: 0;
   border-radius: 9px;
   background: transparent;
@@ -222,10 +223,6 @@ h2,
 }
 .language-dropdown button:hover {
   background: var(--surface-soft);
-}
-.language-dropdown button span {
-  color: var(--text-muted);
-  font-size: 0.75rem;
 }
 .account-link {
   padding: 7px 8px;
@@ -1165,7 +1162,7 @@ h3 {
 }
 .footer-language {
   position: relative;
-  width: min(100%, 210px);
+  width: min(100%, 180px);
 }
 .footer-language summary {
   min-height: 40px;
@@ -1199,7 +1196,7 @@ h3 {
 .footer-language button {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 9px 10px;
   border: 0;
   border-radius: 7px;
@@ -1210,9 +1207,6 @@ h3 {
 }
 .footer-language button:hover {
   background: #292929;
-}
-.footer-language button span {
-  color: var(--text-muted);
 }
 .footer-links {
   display: grid;
