@@ -129,6 +129,8 @@ const translations = {
   "Finanse, które da się zrozumieć.": "Finances you can understand.",
   "Instagram · wkrótce": "Instagram · coming soon",
   "LinkedIn · wkrótce": "LinkedIn · coming soon",
+  "X · wkrótce": "X · coming soon",
+  "Śledź nas": "Follow us",
   Produkt: "Product",
   Projekt: "Project",
   Platformy: "Platforms",
@@ -184,6 +186,9 @@ function applyLanguage(language) {
   document.querySelectorAll(".current-language").forEach((label) => {
     label.textContent = language.toUpperCase();
   });
+  document.querySelectorAll(".footer-language-name").forEach((label) => {
+    label.textContent = language === "en" ? "English" : "Polski";
+  });
   document.querySelector("#email").placeholder =
     language === "en" ? "you@example.com" : "ty@adres.pl";
   document.querySelector('meta[name="description"]').content =
@@ -215,6 +220,9 @@ function applyLanguage(language) {
   }
   document
     .querySelectorAll(".language-menu")
+    .forEach((menu) => menu.removeAttribute("open"));
+  document
+    .querySelectorAll(".footer-language")
     .forEach((menu) => menu.removeAttribute("open"));
 }
 

@@ -1120,53 +1120,112 @@ h3 {
 }
 
 .site-footer {
-  padding: 60px 0;
+  padding: 112px 0 132px;
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 56px;
+  grid-template-columns: 0.9fr 2.1fr;
+  gap: 110px;
 }
 .footer-brand {
-  margin-bottom: 17px;
+  margin-bottom: 26px;
 }
-.footer-grid > div:first-child p {
-  color: var(--text-secondary);
+.footer-follow {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
 }
 .footer-grid small {
+  display: block;
+  margin-top: 24px;
   color: var(--text-muted);
+  font-size: 0.75rem;
 }
 .footer-socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  margin: 24px 0 28px;
-  color: var(--text-muted);
-  font-size: 0.82rem;
+  max-width: 270px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 24px;
+  margin: 0 0 26px;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 .footer-socials a:hover {
   color: var(--green-light);
 }
+.footer-language {
+  position: relative;
+  width: min(100%, 210px);
+}
+.footer-language summary {
+  min-height: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  cursor: pointer;
+  list-style: none;
+}
+.footer-language summary::-webkit-details-marker {
+  display: none;
+}
+.footer-language > div {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  bottom: calc(100% + 8px);
+  left: 0;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+}
+.footer-language button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.footer-language button:hover {
+  background: #292929;
+}
+.footer-language button span {
+  color: var(--text-muted);
+}
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 54px;
 }
 .footer-links div {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 .footer-links strong {
-  margin-bottom: 7px;
+  margin-bottom: 9px;
   color: var(--text-muted);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-size: 0.76rem;
+  font-weight: 500;
 }
 .footer-links a,
 .footer-links span {
-  color: var(--text-secondary);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 .footer-links a:hover {
   color: var(--green-light);
@@ -1352,6 +1411,7 @@ body.menu-open {
   }
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 72px;
   }
 }
 
@@ -1444,6 +1504,10 @@ body.menu-open {
   }
   .footer-links {
     grid-template-columns: 1fr 1fr;
+    gap: 40px 24px;
+  }
+  .site-footer {
+    padding: 80px 0 96px;
   }
 }
 
