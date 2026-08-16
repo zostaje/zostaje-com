@@ -127,9 +127,6 @@ const translations = {
   "Formularz otworzy Twoją aplikację pocztową. Automatyczne zapisy podłączymy wraz z backendem.":
     "The form will open your email app. Automated sign-ups will be connected with the backend.",
   "Finanse, które da się zrozumieć.": "Finances you can understand.",
-  "Instagram · wkrótce": "Instagram · coming soon",
-  "LinkedIn · wkrótce": "LinkedIn · coming soon",
-  "X · wkrótce": "X · coming soon",
   "Śledź nas": "Follow us",
   "Zapytaj AI o Zostaje": "Ask AI about Zostaje",
   "Pełny opis projektu": "Full project overview",

@@ -1197,9 +1197,9 @@ h3 {
 }
 .footer-socials {
   max-width: 270px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
   margin: 0 0 26px;
   color: var(--text);
   font-size: 0.8rem;
