@@ -1166,18 +1166,20 @@ h3 {
 }
 
 .site-footer {
-  padding: 112px 0 132px;
+  padding: 96px 0 128px;
 }
 .footer-grid {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 96px;
+  align-items: flex-start;
+  gap: 0;
 }
 .footer-about {
   width: 280px;
   margin-right: auto;
+  order: 1;
 }
 .footer-brand {
   margin-bottom: 26px;
@@ -1314,11 +1316,13 @@ h3 {
   background: #292929;
 }
 .footer-links {
-  width: min(100%, 610px);
+  width: 50%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 18px;
   margin-left: auto;
+  padding-left: 24px;
+  order: 0;
 }
 .footer-links div {
   display: flex;
@@ -1533,6 +1537,7 @@ body.menu-open {
     order: 1;
     width: 100%;
     margin-left: 0;
+    padding-left: 0;
   }
   .footer-about {
     order: 2;
