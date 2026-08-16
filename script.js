@@ -144,6 +144,7 @@ const translations = {
   "Wspólny backend": "Shared backend",
   "Publiczne MCP · planowane": "Public MCP · planned",
   Informacje: "Information",
+  Pomoc: "Help",
   "Zamknięte demo": "Private demo",
   "Prywatność danych": "Data privacy",
   Polska: "Poland",

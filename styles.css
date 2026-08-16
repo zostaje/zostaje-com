@@ -1727,3 +1727,142 @@ body.menu-open {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Shared layouts for SEO subpages. */
+.subpage-main {
+  min-height: 70vh;
+}
+.subpage-hero {
+  padding: 96px 0 72px;
+  text-align: center;
+}
+.subpage-hero-copy {
+  max-width: 760px;
+  margin-inline: auto;
+}
+.subpage-kicker {
+  margin-bottom: 18px;
+  color: var(--green-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.subpage-hero h1 {
+  margin-bottom: 24px;
+}
+.subpage-lead {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  color: var(--text-secondary);
+  font-size: 1.12rem;
+}
+.subpage-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.subpage-content {
+  padding: 40px 0 112px;
+}
+.subpage-grid,
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.subpage-card,
+.help-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.subpage-card.is-active {
+  border-color: var(--green);
+  background: var(--surface-raised);
+}
+.subpage-card p,
+.help-card p {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+.subpage-card .platform-status {
+  margin-bottom: 24px;
+}
+.pricing-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 660px);
+  justify-content: center;
+  gap: 18px;
+}
+.pricing-page-card {
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-raised);
+}
+.pricing-page-price {
+  margin: 28px 0 10px;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.pricing-page-list {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 32px;
+  padding: 24px 0;
+  border-block: 1px solid var(--line);
+  list-style: none;
+}
+.pricing-page-list li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: var(--green-light);
+}
+.help-intro {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+.help-card h2 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+.help-contact {
+  max-width: 760px;
+  margin: 56px auto 0;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-raised);
+  text-align: center;
+}
+.subpage-footer {
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 767px) {
+  .subpage-hero {
+    padding: 72px 0 54px;
+  }
+  .subpage-content {
+    padding: 24px 0 80px;
+  }
+  .subpage-grid,
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+  .subpage-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .subpage-actions .button {
+    width: 100%;
+  }
+  .pricing-page-card {
+    padding: 26px 20px;
+  }
+}
