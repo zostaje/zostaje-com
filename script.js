@@ -68,6 +68,25 @@ const translations = {
     "The planned public MCP tool will connect Zostaje with a compatible assistant such as ChatGPT and analyze selected data under clear rules. You decide what to share.",
   "Bo dobre finanse nie powinny zajmować całego wieczoru.":
     "Because healthy finances should not take all evening.",
+  "Dostępne dzisiaj": "Available today",
+  "16 sierpnia": "August 16",
+  "Wydane w tym tygodniu": "Spent this week",
+  "za 4 dni": "in 4 days",
+  "Plan miesiąca": "Monthly plan",
+  Rachunki: "Bills",
+  Codzienne: "Everyday",
+  Cel: "Goal",
+  "Plan zaktualizowany automatycznie": "Plan updated automatically",
+  "Twój rytm": "Your rhythm",
+  "7 dni": "7 days",
+  Pn: "M",
+  Wt: "T",
+  Śr: "W",
+  Cz: "T",
+  Pt: "F",
+  So: "S",
+  Nd: "S",
+  "Krótki przegląd ukończony każdego dnia": "Quick review completed every day",
   "Mniej niepewności": "Less uncertainty",
   "Widzisz realną kwotę do dyspozycji, zanim podejmiesz decyzję.":
     "See the amount truly available before you make a decision.",
@@ -108,6 +127,8 @@ const translations = {
   "Formularz otworzy Twoją aplikację pocztową. Automatyczne zapisy podłączymy wraz z backendem.":
     "The form will open your email app. Automated sign-ups will be connected with the backend.",
   "Finanse, które da się zrozumieć.": "Finances you can understand.",
+  "Instagram · wkrótce": "Instagram · coming soon",
+  "LinkedIn · wkrótce": "LinkedIn · coming soon",
   Produkt: "Product",
   Projekt: "Project",
   Platformy: "Platforms",
@@ -181,6 +202,12 @@ function applyLanguage(language) {
       "aria-label",
       language === "en" ? "Close menu" : "Zamknij menu",
     );
+  document
+    .querySelector(".footer-socials")
+    .setAttribute(
+      "aria-label",
+      language === "en" ? "Social media" : "Media społecznościowe",
+    );
   try {
     localStorage.setItem("zostaje-language", language);
   } catch {
@@ -243,3 +270,33 @@ try {
   savedLanguage = "pl";
 }
 applyLanguage(savedLanguage);
+
+const siteHeader = document.querySelector(".site-header");
+const updateHeader = () =>
+  siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+updateHeader();
+window.addEventListener("scroll", updateHeader, { passive: true });
+
+const benefitVisual = document.querySelector(".benefit-visual");
+const benefitItems = document.querySelectorAll(".benefit-item");
+
+function showBenefit(benefit) {
+  benefitVisual.dataset.activeBenefit = benefit;
+  benefitItems.forEach((item) => {
+    const isActive = item.dataset.benefit === benefit;
+    item.classList.toggle("is-active", isActive);
+    item.setAttribute("aria-pressed", String(isActive));
+  });
+  benefitVisual.querySelectorAll(".benefit-scene").forEach((scene) => {
+    scene.setAttribute(
+      "aria-hidden",
+      String(!scene.classList.contains(`scene-${benefit}`)),
+    );
+  });
+}
+
+benefitItems.forEach((item) => {
+  item.addEventListener("mouseenter", () => showBenefit(item.dataset.benefit));
+  item.addEventListener("focus", () => showBenefit(item.dataset.benefit));
+  item.addEventListener("click", () => showBenefit(item.dataset.benefit));
+});

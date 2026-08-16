@@ -25,6 +25,7 @@ jasność, postęp i pieniądze pozostające pod kontrolą.
 | Błąd                     | `#FF6B6B` | Błędy i negatywne zmiany              |
 
 Zieleni używamy oszczędnie: ma prowadzić wzrok, a nie wypełniać cały interfejs.
+Zaznaczenie tekstu używa zieleni głównej `#16A36A`, bez zmiany koloru liter.
 
 ## Typografia
 
@@ -41,6 +42,7 @@ Zieleni używamy oszczędnie: ma prowadzić wzrok, a nie wypełniać cały inter
 - Sekcje desktopowe: zwykle 120–140 px pionowego oddechu.
 - Karty mają cienką, spokojną linię zamiast ciężkiego cienia.
 - Cień stosujemy tylko do makiet lub elementów unoszących się nad układem.
+- Nawigacja nie ma linii w stanie początkowym; po przewinięciu lekko się obniża i pokazuje separator.
 
 ## Logo
 

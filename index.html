@@ -37,7 +37,7 @@
         <div class="nav-actions">
           <details class="language-menu">
             <summary aria-label="Zmień język">
-              <span class="globe-icon" aria-hidden="true"></span>
+              <span class="language-globe" aria-hidden="true">🌐</span>
               <span class="current-language">PL</span>
               <span class="chevron" aria-hidden="true">⌄</span>
             </summary>
@@ -87,7 +87,7 @@
               type="button"
               aria-label="Zmień język"
             >
-              <span class="globe-icon" aria-hidden="true"></span>
+              <span class="language-globe" aria-hidden="true">🌐</span>
             </button>
             <button class="menu-close" type="button" aria-label="Zamknij menu">
               <span></span><span></span>
@@ -302,39 +302,108 @@
 
       <section class="section why-section">
         <div class="container why-grid">
-          <div class="why-copy">
+          <div class="why-content">
             <h2>Bo dobre finanse nie powinny zajmować całego wieczoru.</h2>
+            <div class="benefit-list">
+              <button
+                class="benefit-item is-active"
+                type="button"
+                data-benefit="clarity"
+                aria-pressed="true"
+              >
+                <span class="benefit-number">01</span>
+                <span class="benefit-item-copy">
+                  <span class="benefit-title">Mniej niepewności</span>
+                  <span class="benefit-description">
+                    Widzisz realną kwotę do dyspozycji, zanim podejmiesz
+                    decyzję.
+                  </span>
+                </span>
+              </button>
+              <button
+                class="benefit-item"
+                type="button"
+                data-benefit="automation"
+                aria-pressed="false"
+              >
+                <span class="benefit-number">02</span>
+                <span class="benefit-item-copy">
+                  <span class="benefit-title">Mniej ręcznej pracy</span>
+                  <span class="benefit-description">
+                    Plan, wydatki i nadchodzące płatności tworzą jeden spójny
+                    obraz.
+                  </span>
+                </span>
+              </button>
+              <button
+                class="benefit-item"
+                type="button"
+                data-benefit="rhythm"
+                aria-pressed="false"
+              >
+                <span class="benefit-number">03</span>
+                <span class="benefit-item-copy">
+                  <span class="benefit-title">Więcej regularności</span>
+                  <span class="benefit-description">
+                    Krótki codzienny podgląd zastępuje wielkie porządki raz w
+                    miesiącu.
+                  </span>
+                </span>
+              </button>
+            </div>
           </div>
-          <div class="benefit-list">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>Mniej niepewności</h3>
-                <p>
-                  Widzisz realną kwotę do dyspozycji, zanim podejmiesz decyzję.
-                </p>
+
+          <div
+            class="benefit-visual"
+            data-active-benefit="clarity"
+            aria-live="polite"
+          >
+            <div class="benefit-scene scene-clarity" aria-hidden="false">
+              <div class="scene-top">
+                <span>Dostępne dzisiaj</span><span>16 sierpnia</span>
               </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>Mniej ręcznej pracy</h3>
-                <p>
-                  Plan, wydatki i nadchodzące płatności tworzą jeden spójny
-                  obraz.
-                </p>
+              <p class="scene-amount">1 840 <small>zł</small></p>
+              <div class="scene-progress"><span></span></div>
+              <div class="scene-summary">
+                <span>Wydane w tym tygodniu</span><strong>− 386 zł</strong>
               </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>Więcej regularności</h3>
-                <p>
-                  Krótki codzienny podgląd zastępuje wielkie porządki raz w
-                  miesiącu.
-                </p>
+              <div class="scene-summary">
+                <span>Następna płatność</span><strong>za 4 dni</strong>
               </div>
-            </article>
+            </div>
+            <div class="benefit-scene scene-automation" aria-hidden="true">
+              <div class="scene-top">
+                <span>Plan miesiąca</span><span>68%</span>
+              </div>
+              <div class="scene-budget">
+                <span>Rachunki</span><i><b class="budget-82"></b></i
+                ><strong>82%</strong>
+              </div>
+              <div class="scene-budget">
+                <span>Codzienne</span><i><b class="budget-54"></b></i
+                ><strong>54%</strong>
+              </div>
+              <div class="scene-budget">
+                <span>Cel</span><i><b class="budget-36"></b></i
+                ><strong>36%</strong>
+              </div>
+              <p class="scene-note">Plan zaktualizowany automatycznie</p>
+            </div>
+            <div class="benefit-scene scene-rhythm" aria-hidden="true">
+              <div class="scene-top">
+                <span>Twój rytm</span><span>7 dni</span>
+              </div>
+              <div class="rhythm-days" aria-hidden="true">
+                <span>Pn</span><span>Wt</span><span>Śr</span><span>Cz</span
+                ><span>Pt</span><span>So</span><span>Nd</span>
+              </div>
+              <div class="rhythm-checks" aria-hidden="true">
+                <span>✓</span><span>✓</span><span>✓</span><span>✓</span
+                ><span>✓</span><span>✓</span><span>✓</span>
+              </div>
+              <p class="rhythm-score">7/7</p>
+              <p class="scene-note">Krótki przegląd ukończony każdego dnia</p>
+            </div>
           </div>
         </div>
       </section>
@@ -465,6 +534,11 @@
             <span>Zostaje</span>
           </a>
           <p>Finanse, które da się zrozumieć.</p>
+          <nav class="footer-socials" aria-label="Media społecznościowe">
+            <a href="https://github.com/zostaje" rel="noreferrer">GitHub</a>
+            <span>Instagram · wkrótce</span>
+            <span>LinkedIn · wkrótce</span>
+          </nav>
           <small>© 2026 Zostaje</small>
         </div>
         <div class="footer-links">
