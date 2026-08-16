@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Zostaje pomaga zrozumieć codzienne finanse i zobaczyć, ile naprawdę możesz wydać — bez arkuszy i finansowego żargonu."
+    />
+    <meta
+      name="keywords"
+      content="finanse osobiste, budżet domowy, aplikacja finansowa, kontrola wydatków, planowanie budżetu, iOS, Zostaje"
+    />
+    <meta name="author" content="Zostaje" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <link rel="canonical" href="https://zostaje.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zostaje" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:url" content="https://zostaje.com/" />
+    <meta
+      property="og:title"
+      content="Zostaje — finanse, które da się zrozumieć"
+    />
+    <meta
+      property="og:description"
+      content="Zobacz, ile naprawdę możesz dziś wydać. Zostaje porządkuje wydatki, plany i nadchodzące płatności w jednym prostym widoku."
+    />
+    <meta property="og:image" content="https://zostaje.com/og-image.png" />
+    <meta
+      property="og:image:alt"
+      content="Zostaje — finanse, które da się zrozumieć"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Zostaje — finanse, które da się zrozumieć"
+    />
+    <meta
+      name="twitter:description"
+      content="Jedno spokojne miejsce do codziennych finansów."
+    />
+    <meta name="twitter:image" content="https://zostaje.com/og-image.png" />
+    <title>Zostaje — finanse, które da się zrozumieć</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://zostaje.com/#organization",
+            "name": "Zostaje",
+            "url": "https://zostaje.com/",
+            "sameAs": ["https://github.com/zostaje"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://zostaje.com/#website",
+            "url": "https://zostaje.com/",
+            "name": "Zostaje",
+            "inLanguage": ["pl", "en"],
+            "publisher": { "@id": "https://zostaje.com/#organization" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://zostaje.com/#app",
+            "name": "Zostaje",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "iOS, macOS, Windows",
+            "description": "Aplikacja do codziennych finansów, która pokazuje, ile pieniędzy naprawdę możesz bezpiecznie wydać.",
+            "url": "https://zostaje.com/",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "PLN",
+              "description": "Bezpłatne pierwsze zamknięte demo"
+            },
+            "publisher": { "@id": "https://zostaje.com/#organization" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Zostaje — strona główna">
+          <span class="logo-placeholder" aria-hidden="true"></span>
+          <span>Zostaje</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Główna nawigacja">
+          <a href="#jak-dziala">Jak działa</a>
+          <a href="#funkcje">Funkcje</a>
+          <a href="demo/index.html">Demo</a>
+          <a href="pricing/index.html">Cennik</a>
+          <a href="download/index.html">Pobierz</a>
+        </nav>
+
+        <div class="nav-right">
+          <details class="language-menu">
+            <summary aria-label="Zmień język">
+              <svg
+                class="language-globe"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+              </svg>
+              <svg
+                class="language-chevron"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </summary>
+            <div class="language-dropdown">
+              <button type="button" data-language="pl">Polski</button>
+              <button type="button" data-language="en">English</button>
+            </div>
+          </details>
+          <button
+            class="account-link"
+            type="button"
+            disabled
+            title="Konto będzie dostępne po uruchomieniu aplikacji"
+          >
+            Konto
+          </button>
+          <a class="button button-small button-outline" href="#demo"
+            >Zapisz się na demo</a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Otwórz menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-menu-inner">
+        <div class="mobile-menu-top">
+          <a class="brand" href="#top" aria-label="Zostaje — strona główna">
+            <span class="logo-placeholder" aria-hidden="true"></span
+            ><span>Zostaje</span>
+          </a>
+          <div class="mobile-menu-tools">
+            <button
+              class="mobile-language-toggle"
+              type="button"
+              aria-label="Zmień język"
+            >
+              <svg
+                class="language-globe"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+              </svg>
+            </button>
+            <button class="menu-close" type="button" aria-label="Zamknij menu">
+              <span></span><span></span>
+            </button>
+          </div>
+        </div>
+        <nav class="mobile-primary-nav" aria-label="Mobilna nawigacja">
+          <a href="#jak-dziala">Jak działa</a>
+          <a href="#funkcje">Funkcje</a>
+          <a href="demo/index.html">Demo</a>
+          <a href="pricing/index.html">Cennik</a>
+          <a href="download/index.html">Pobierz</a>
+          <a href="#demo">Zapisz się na demo</a>
+        </nav>
+        <div class="mobile-secondary-nav">
+          <p>Dowiedz się więcej</p>
+          <div>
+            <a href="#bezpieczenstwo">Bezpieczeństwo</a>
+            <a href="https://github.com/zostaje" rel="noreferrer">GitHub</a>
+            <button type="button" disabled>Konto</button>
+            <a href="mailto:demo@zostaje.app">Kontakt</a>
+          </div>
+        </div>
+        <div class="mobile-language-panel" hidden>
+          <p>Język strony</p>
+          <button type="button" data-language="pl">Polski</button>
+          <button type="button" data-language="en">English</button>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="status-pill">
+              <span></span> Aplikacja jest w trakcie tworzenia
+            </p>
+            <h1>Wiesz, ile <em>zostaje.</em> Zanim miesiąc się skończy.</h1>
+            <p class="hero-lead">
+              Jedno spokojne miejsce do codziennych finansów. Zostaje porządkuje
+              wydatki, przypomina o planach i pokazuje prostą odpowiedź: ile
+              naprawdę możesz dziś wydać.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="demo/index.html"
+                >Wypróbuj demo w przeglądarce</a
+              >
+              <a class="text-link" href="#jak-dziala"
+                >Zobacz, jak to działa <span>↓</span></a
+              >
+            </div>
+          </div>
+
+          <div
+            class="hero-visual"
+            role="img"
+            aria-label="Przykładowy widok aplikacji Zostaje"
+          >
+            <div class="balance-card">
+              <div class="mockup-topline">
+                <span>Dzisiaj</span>
+                <span class="mockup-avatar">MK</span>
+              </div>
+              <p class="balance-label">Możesz bezpiecznie wydać</p>
+              <p class="balance-value">1 840 <small>zł</small></p>
+              <div class="balance-meter"><span></span></div>
+              <div class="balance-caption">
+                <span>Plan na sierpień</span>
+                <strong>68% pod kontrolą</strong>
+              </div>
+            </div>
+            <div class="floating-note">
+              <span class="note-dot"></span>
+              <div>
+                <small>Następna płatność</small>
+                <strong>Mieszkanie · za 4 dni</strong>
+              </div>
+              <b>2 400 zł</b>
+            </div>
+            <div class="floating-tag">+ 320 zł lepiej niż w lipcu</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Najważniejsze cechy">
+        <div class="container trust-grid">
+          <p><strong>Prosto</strong><span>bez finansowego żargonu</span></p>
+          <p>
+            <strong>W jednym miejscu</strong
+            ><span>lokalnie za darmo, chmura opcjonalnie</span>
+          </p>
+          <p>
+            <strong>Pod Twoją kontrolą</strong
+            ><span>jasne zasady dostępu do danych</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="section intro" id="jak-dziala">
+        <div class="container narrow-heading">
+          <h2>Twoje finanse mają opowiadać prostą historię.</h2>
+          <p>
+            Zostaje zbiera ważne informacje i przekłada je na czytelny plan
+            dnia, tygodnia i miesiąca. Nie musisz znać kategorii księgowych ani
+            budować kolejnego arkusza.
+          </p>
+        </div>
+
+        <div class="container steps-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <h3>Zobacz całość</h3>
+            <p>
+              Salda, stałe opłaty i codzienne wydatki spotykają się w jednym,
+              czytelnym widoku.
+            </p>
+          </article>
+          <article class="step-card featured">
+            <span class="step-number">02</span>
+            <h3>Poznaj bezpieczną kwotę</h3>
+            <p>
+              Aplikacja pokazuje, ile zostaje po uwzględnieniu planów i
+              nadchodzących płatności.
+            </p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <h3>Podejmij decyzję</h3>
+            <p>
+              Widzisz kontekst przed zakupem, zamiast analizować konsekwencje
+              pod koniec miesiąca.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section feature-section" id="funkcje">
+        <div class="container section-heading-row">
+          <div>
+            <h2>
+              Wystarczająco dużo, żeby pomagać. Wystarczająco prosto, żeby
+              używać.
+            </h2>
+          </div>
+          <p>
+            Każda funkcja ma skracać drogę od „co się dzieje z moimi
+            pieniędzmi?” do konkretnej, spokojnej decyzji.
+          </p>
+        </div>
+
+        <div class="container feature-grid">
+          <article class="feature-card feature-large">
+            <div class="feature-copy">
+              <h3>Kwota, która mówi więcej niż saldo.</h3>
+              <p>
+                Zobacz pieniądze dostępne po odjęciu rachunków, celów i
+                planowanych wydatków. Bez liczenia wszystkiego od nowa.
+              </p>
+            </div>
+            <div class="mini-panel">
+              <div><span>Wpływy</span><strong>8 900 zł</strong></div>
+              <div><span>Stałe płatności</span><strong>− 4 260 zł</strong></div>
+              <div class="panel-total">
+                <span>Zostaje</span><strong>4 640 zł</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon">↗</span>
+            <h3>Plan bez arkusza</h3>
+            <p>
+              Ustal limity i cele zwykłym językiem. Postęp zobaczysz bez
+              ręcznego formatowania tabel.
+            </p>
+            <div class="category-bars" aria-hidden="true">
+              <span class="bar-72"></span>
+              <span class="bar-48"></span>
+              <span class="bar-84"></span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon">◎</span>
+            <h3>Mapa Konsekwencji</h3>
+            <p>
+              Każdy wpis pokazuje, co zmienia: bezpieczną kwotę, cel,
+              zobowiązanie albo decyzję, która jeszcze czeka.
+            </p>
+            <ul class="transaction-list">
+              <li><span>Zakupy</span><strong>− 86,40 zł</strong></li>
+              <li><span>Transport</span><strong>− 12,00 zł</strong></li>
+            </ul>
+          </article>
+
+          <article class="feature-card feature-wide">
+            <div>
+              <h3>Twoje dane mogą pracować także z AI.</h3>
+            </div>
+            <p>
+              Planowane publiczne MCP pozwoli analizować wybrane dane lokalnie
+              albo przez świadomy, ograniczony dostęp w chmurze. To Ty
+              zdecydujesz, co udostępniasz i na jak długo.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section why-section">
+        <div class="container why-grid">
+          <div class="why-content">
+            <h2>Bo dobre finanse nie powinny zajmować całego wieczoru.</h2>
+            <div class="benefit-list">
+              <button
+                class="benefit-item is-active"
+                type="button"
+                data-benefit="clarity"
+                aria-pressed="true"
+              >
+                <span class="benefit-number">01</span>
+                <span class="benefit-item-copy">
+                  <span class="benefit-title">Mniej niepewności</span>
+                  <span class="benefit-description">
+                    Widzisz realną kwotę do dyspozycji, zanim podejmiesz
+                    decyzję.
+                  </span>
+                </span>
+              </button>
+              <button
+                class="benefit-item"
+                type="button"
+                data-benefit="automation"
+                aria-pressed="false"
+              >
+                <span class="benefit-number">02</span>
+                <span class="benefit-item-copy">
+                  <span class="benefit-title">Mniej ręcznej pracy</span>
+                  <span class="benefit-description">
+                    Plan, wydatki i nadchodzące płatności tworzą jeden spójny
+                    obraz.
+                  </span>
+                </span>
+              </button>
+              <button
+                class="benefit-item"
+                type="button"
+                data-benefit="rhythm"
+                aria-pressed="false"
+              >
+                <span class="benefit-number">03</span>
+                <span class="benefit-item-copy">
+                  <span class="benefit-title">Więcej regularności</span>
+                  <span class="benefit-description">
+                    Krótki codzienny podgląd zastępuje wielkie porządki raz w
+                    miesiącu.
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="benefit-visual"
+            data-active-benefit="clarity"
+            aria-live="polite"
+          >
+            <div class="benefit-scene scene-clarity" aria-hidden="false">
+              <div class="scene-top">
+                <span>Dostępne dzisiaj</span><span>16 sierpnia</span>
+              </div>
+              <p class="scene-amount">1 840 <small>zł</small></p>
+              <div class="scene-progress"><span></span></div>
+              <div class="scene-summary">
+                <span>Wydane w tym tygodniu</span><strong>− 386 zł</strong>
+              </div>
+              <div class="scene-summary">
+                <span>Następna płatność</span><strong>za 4 dni</strong>
+              </div>
+            </div>
+            <div class="benefit-scene scene-automation" aria-hidden="true">
+              <div class="scene-top">
+                <span>Plan miesiąca</span><span>68%</span>
+              </div>
+              <div class="scene-budget">
+                <span>Rachunki</span><i><b class="budget-82"></b></i
+                ><strong>82%</strong>
+              </div>
+              <div class="scene-budget">
+                <span>Codzienne</span><i><b class="budget-54"></b></i
+                ><strong>54%</strong>
+              </div>
+              <div class="scene-budget">
+                <span>Cel</span><i><b class="budget-36"></b></i
+                ><strong>36%</strong>
+              </div>
+              <p class="scene-note">Plan zaktualizowany automatycznie</p>
+            </div>
+            <div class="benefit-scene scene-rhythm" aria-hidden="true">
+              <div class="scene-top">
+                <span>Twój rytm</span><span>7 dni</span>
+              </div>
+              <div class="rhythm-days" aria-hidden="true">
+                <span>Pn</span><span>Wt</span><span>Śr</span><span>Cz</span
+                ><span>Pt</span><span>So</span><span>Nd</span>
+              </div>
+              <div class="rhythm-checks" aria-hidden="true">
+                <span>✓</span><span>✓</span><span>✓</span><span>✓</span
+                ><span>✓</span><span>✓</span><span>✓</span>
+              </div>
+              <p class="rhythm-score">7/7</p>
+              <p class="scene-note">Krótki przegląd ukończony każdego dnia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing-section" id="cennik">
+        <div class="container pricing-grid">
+          <div>
+            <h2>Prosty cennik. Bez niespodzianek.</h2>
+            <p>
+              Pierwsze zamknięte demo będzie bezpłatne. Finalne plany i ceny
+              pokażemy przed publicznym startem, kiedy zakres aplikacji będzie
+              gotowy.
+            </p>
+          </div>
+          <article class="pricing-card">
+            <span class="pricing-status">Pierwsze demo</span>
+            <p class="pricing-value">0 zł</p>
+            <p>
+              Testuj pierwszą wersję i pomóż nam zdecydować, co powinno powstać
+              dalej.
+            </p>
+            <a class="button button-primary" href="#demo">Zapisz się na demo</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section platforms-section" id="pobierz">
+        <div class="container platforms-grid">
+          <div>
+            <h2>Najpierw w kieszeni. Później na biurku.</h2>
+            <p class="platforms-lead">
+              Zostaje powstaje najpierw jako natywna aplikacja na iPhone’a,
+              działająca bez konta. Kolejnym krokiem będzie lekka wersja na
+              macOS i Windows oraz opcjonalna, szyfrowana synchronizacja.
+            </p>
+          </div>
+          <div class="platform-list">
+            <article class="platform-active">
+              <span class="platform-status">W budowie</span>
+              <h3>iOS</h3>
+              <p>
+                Natywna aplikacja Swift, projektowana do szybkiego codziennego
+                użycia.
+              </p>
+            </article>
+            <article>
+              <span class="platform-status">Następny etap</span>
+              <h3>macOS + Windows</h3>
+              <p>
+                Lekka aplikacja komputerowa do szerszego planowania i analizy.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section security-section" id="bezpieczenstwo">
+        <div class="container security-panel">
+          <div>
+            <h2>Twoje finanse nie są paliwem reklamowym.</h2>
+          </div>
+          <div class="security-copy">
+            <p>
+              Darmowa wersja zapisuje dane lokalnie i nie wymaga konta. Chmura
+              jest opcjonalna, a synchronizowane wpisy są szyfrowane przed
+              opuszczeniem urządzenia. Integracje — również MCP — działają
+              wyłącznie za Twoją zgodą.
+            </p>
+            <p class="security-note">
+              Szczegóły techniczne i polityka prywatności pojawią się przed
+              publicznym startem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section demo-section" id="demo">
+        <div class="container demo-panel">
+          <div class="demo-copy">
+            <h2>Zobacz Zostaje wcześniej.</h2>
+            <p>
+              Zapisz się, jeśli chcesz przetestować pierwszą wersję, przekazać
+              opinię i dostać informację, kiedy ruszy zamknięte demo aplikacji
+              na iOS.
+            </p>
+          </div>
+          <form
+            class="demo-form"
+            action="mailto:demo@zostaje.app"
+            method="post"
+            enctype="text/plain"
+          >
+            <label for="email">Twój adres e-mail</label>
+            <div class="input-row">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="ty@adres.pl"
+                required
+              />
+              <button class="button button-primary" type="submit">
+                Zapisz się na demo
+              </button>
+            </div>
+            <label class="consent-row">
+              <input type="checkbox" name="zgoda" value="tak" required />
+              <span>Chcę otrzymać informacje o demie i rozwoju Zostaje.</span>
+            </label>
+            <p class="form-note">
+              Formularz otworzy Twoją aplikację pocztową. Automatyczne zapisy
+              podłączymy wraz z backendem.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a
+            class="brand footer-brand"
+            href="#top"
+            aria-label="Zostaje — wróć na górę"
+          >
+            <span class="logo-placeholder" aria-hidden="true"></span>
+            <span>Zostaje</span>
+          </a>
+          <p class="footer-follow">Śledź nas</p>
+          <nav
+            class="footer-socials"
+            aria-label="Media społecznościowe w stopce"
+          >
+            <a href="https://github.com/zostaje" rel="noreferrer">GitHub</a>
+            <a
+              href="https://x.com/zostaje_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              >X · @zostaje_app</a
+            >
+          </nav>
+          <div class="footer-ai">
+            <p class="footer-ai-heading">Zapytaj AI o Zostaje</p>
+            <div class="footer-ai-links">
+              <a
+                href="https://chatgpt.com/"
+                data-ai="chatgpt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M8 9.2 12 7l4 2.2v5.2L12 17l-4-2.6Z"></path>
+                </svg>
+                <span
+                  ><strong>ChatGPT</strong
+                  ><small>Pełny opis projektu</small></span
+                >
+              </a>
+              <a
+                href="https://claude.ai/new"
+                data-ai="claude"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3 4.5 19h15Z"></path>
+                  <path d="M9.2 14h5.6"></path>
+                </svg>
+                <span
+                  ><strong>Claude</strong
+                  ><small>Analiza z referencjami</small></span
+                >
+              </a>
+              <a
+                href="https://gemini.google.com/app"
+                data-ai="gemini"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2c.8 5.7 4.3 9.2 10 10-5.7.8-9.2 4.3-10 10-.8-5.7-4.3-9.2-10-10 5.7-.8 9.2-4.3 10-10Z"
+                  ></path>
+                </svg>
+                <span
+                  ><strong>Gemini</strong
+                  ><small>Prompt kopiowany automatycznie</small></span
+                >
+              </a>
+            </div>
+            <p class="footer-ai-note" aria-live="polite">
+              Gotowy prompt zawiera opis aplikacji i linki do źródeł.
+            </p>
+          </div>
+          <details class="footer-language">
+            <summary>
+              <svg
+                class="language-globe"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+                <path d="M12 2a15.3 15.3 0 0 0 0 20"></path>
+              </svg>
+              <span class="footer-language-name">Polski</span>
+              <svg
+                class="language-chevron"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </summary>
+            <div>
+              <button type="button" data-language="pl">Polski</button>
+              <button type="button" data-language="en">English</button>
+            </div>
+          </details>
+          <small>© 2026 Zostaje</small>
+        </div>
+        <div class="footer-links">
+          <div>
+            <nav aria-label="Produkt">
+              <strong>Produkt</strong><a href="#jak-dziala">Jak działa</a
+              ><a href="#funkcje">Funkcje</a><a href="demo/index.html">Demo</a
+              ><a href="pricing/index.html">Cennik</a
+              ><a href="download/index.html">Pobierz</a>
+            </nav>
+            <nav aria-label="Platformy">
+              <strong>Platformy</strong><span>iOS · w budowie</span
+              ><span>macOS · planowane</span><span>Windows · planowane</span>
+            </nav>
+          </div>
+          <div>
+            <nav aria-label="Projekt">
+              <strong>Projekt</strong
+              ><a href="https://github.com/zostaje" rel="noreferrer">GitHub</a
+              ><a href="developers/index.html">Developers</a
+              ><a href="demo/index.html">Demo</a
+              ><a href="#bezpieczenstwo">Bezpieczeństwo</a>
+            </nav>
+            <nav aria-label="Technologia">
+              <strong>Technologia</strong><span>Swift</span
+              ><span>Opcjonalna chmura</span
+              ><span>Publiczne MCP · planowane</span>
+            </nav>
+          </div>
+          <div>
+            <nav aria-label="Kontakt">
+              <strong>Kontakt</strong
+              ><a href="mailto:demo@zostaje.app">demo@zostaje.app</a
+              ><span>Polska</span>
+            </nav>
+            <nav aria-label="Informacje">
+              <strong>Informacje</strong><a href="help/index.html">Pomoc</a
+              ><a href="#demo">Zamknięte demo</a
+              ><a href="#bezpieczenstwo">Prywatność danych</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

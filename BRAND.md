@@ -1,0 +1,59 @@
+# Mini brand guide — Zostaje
+
+## Kierunek
+
+Zostaje ma być spokojne, konkretne i ludzkie. Marka mówi o finansach bez straszenia,
+oceniania i księgowego żargonu. Wizualnie łączy ciemne, skupione tło z zielenią oznaczającą
+jasność, postęp i pieniądze pozostające pod kontrolą.
+
+## Kolory
+
+| Rola                     | Kolor     | Zastosowanie                          |
+| ------------------------ | --------- | ------------------------------------- |
+| Tło główne               | `#0F0F0F` | Tło całej strony i każdej sekcji      |
+| Powierzchnia             | `#171717` | Karty i spokojne wydzielenia          |
+| Powierzchnia podniesiona | `#262626` | Ważne makiety i duże karty            |
+| Linia                    | `#404040` | Obramowania i separatory              |
+| Tekst główny             | `#EEEEEE` | Nagłówki i kluczowe treści            |
+| Tekst pomocniczy         | `#D4D4D4` | Akapity i opisy                       |
+| Tekst wyciszony          | `#A3A3A3` | Metadane i informacje trzeciego planu |
+| Zieleń główna            | `#16A36A` | CTA, aktywne elementy i postęp        |
+| Zieleń hover             | `#128257` | Stan hover przycisków                 |
+| Zieleń akcentowa         | `#5DDBA3` | Linki, etykiety i krótkie wyróżnienia |
+| Tekst na zieleni         | `#FFFFFF` | Treść przycisków i zielonych paneli   |
+| Ostrzeżenie              | `#F59E0B` | Statusy wymagające uwagi              |
+| Błąd                     | `#FF6B6B` | Błędy i negatywne zmiany              |
+
+Zieleni używamy oszczędnie: ma prowadzić wzrok, a nie wypełniać cały interfejs.
+Zaznaczenie tekstu używa zieleni głównej `#16A36A` z kryciem 30%, bez zmiany koloru liter.
+
+## Typografia
+
+- Krój: `Inter` — nawigacja, tekst, formularze, nagłówki i wartości pieniężne.
+- Nagłówki: `Inter` SemiBold, zwarty line-height i tracking `-0.02em`.
+- Tekst: 16–20 px, bazowy line-height `1.5`.
+- Etykiety: małe litery kapitalikowe, większy tracking, kolor akcentowy.
+- Język: prosty, bez obietnic bez pokrycia; mówimy „aplikacja powstaje”, dopóki nie jest dostępna.
+
+## Kształt i odstępy
+
+- Promienie: 8 px dla kontrolek, 12 px dla kart, 16 px dla dużych paneli.
+- Maksymalna szerokość treści: 1120 px, z niewielkim bezpiecznym marginesem na mobile.
+- Sekcje desktopowe: zwykle około 96 px pionowego oddechu; mobile około 68 px.
+- Karty mają cienką, spokojną linię zamiast ciężkiego cienia.
+- Cień stosujemy tylko do makiet lub elementów unoszących się nad układem.
+- Nawigacja nie ma linii w stanie początkowym; po przewinięciu lekko się obniża i pokazuje separator.
+
+## Logo
+
+Na stronie są dwa puste, obramowane placeholdery na przyszły sygnet: w nagłówku i stopce.
+Docelowy sygnet powinien dobrze działać w kwadracie, mieć prostą sylwetkę i zachowywać
+czytelność w rozmiarze 24–32 px. Do czasu zatwierdzenia logo nie wstawiamy tymczasowego znaku,
+który mógłby zostać błędnie uznany za finalny.
+
+## Styl layoutu
+
+Inspiracją jest rytm nowoczesnych stron produktowych: duże nagłówki, dużo oddechu i makiety
+produktu. Układ Zostaje pozostaje własny dzięki asymetrycznemu hero, finansowym komponentom,
+sekcji procesu 01–03 i jasnej sekcji platformowej. Nie kopiujemy ilustracji, tekstów ani
+charakterystycznych kompozycji Obsidian.
