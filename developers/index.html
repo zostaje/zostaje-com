@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Cennik aplikacji Zostaje. Pierwsze zamknięte demo na iOS będzie bezpłatne, a finalne plany poznamy przed publiczną premierą."
+      content="Zostaje Developers: informacje dla programistów i testerów o planowanym MCP, wspólnym backendzie, integracjach, testach i rozwoju projektu."
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#0f0f0f" />
-    <link rel="canonical" href="https://zostaje.com/pricing/" />
+    <link rel="canonical" href="https://zostaje.com/developers/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Zostaje" />
     <meta property="og:locale" content="pl_PL" />
-    <meta property="og:url" content="https://zostaje.com/pricing/" />
+    <meta property="og:url" content="https://zostaje.com/developers/" />
     <meta
       property="og:title"
-      content="Cennik Zostaje — pierwsze demo bezpłatnie"
+      content="Zostaje Developers — integracje i testy"
     />
     <meta
       property="og:description"
-      content="Sprawdź cenę pierwszego demo oraz zasady przyszłych planów Zostaje."
+      content="Poznaj techniczny kierunek Zostaje i możliwości udziału programistów oraz testerów."
     />
     <meta property="og:image" content="https://zostaje.com/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Cennik Zostaje — pierwsze demo bezpłatnie</title>
+    <title>Zostaje Developers — integracje i testy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,24 +36,27 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Cennik Zostaje",
-        "url": "https://zostaje.com/pricing/",
-        "description": "Cennik aplikacji Zostaje i informacje o bezpłatnym pierwszym demie.",
-        "mainEntity": {
-          "@type": "Offer",
-          "name": "Pierwsze zamknięte demo Zostaje",
-          "price": "0",
-          "priceCurrency": "PLN",
-          "availability": "https://schema.org/PreOrder"
+        "name": "Zostaje Developers",
+        "url": "https://zostaje.com/developers/",
+        "description": "Centrum informacji technicznych dla programistów i testerów projektu Zostaje.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Zostaje",
+          "url": "https://zostaje.com/"
+        },
+        "about": {
+          "@type": "SoftwareApplication",
+          "name": "Zostaje",
+          "applicationCategory": "FinanceApplication"
         }
       }
     </script>
   </head>
   <body
-    data-title-pl="Cennik Zostaje — pierwsze demo bezpłatnie"
-    data-title-en="Zostaje pricing — first demo free"
-    data-description-pl="Cennik aplikacji Zostaje. Pierwsze zamknięte demo na iOS będzie bezpłatne, a finalne plany poznamy przed publiczną premierą."
-    data-description-en="Zostaje pricing. The first private iOS demo will be free, with final plans announced before public launch."
+    data-title-pl="Zostaje Developers — integracje i testy"
+    data-title-en="Zostaje Developers — integrations and testing"
+    data-description-pl="Zostaje Developers: informacje dla programistów i testerów o planowanym MCP, wspólnym backendzie, integracjach, testach i rozwoju projektu."
+    data-description-en="Zostaje Developers: information for developers and testers about the planned MCP, shared backend, integrations, testing and project development."
   >
     <a
       class="skip-link"
@@ -65,8 +68,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="../index.html"
-          ><span class="logo-placeholder" aria-hidden="true"></span
-          ><span>Zostaje</span></a
+          ><span class="logo-placeholder"></span><span>Zostaje</span></a
         >
         <nav class="main-nav" aria-label="Główna nawigacja">
           <a
@@ -76,7 +78,8 @@
             >Jak działa</a
           ><a href="../index.html#funkcje" data-pl="Funkcje" data-en="Features"
             >Funkcje</a
-          ><a href="index.html" data-pl="Cennik" data-en="Pricing">Cennik</a
+          ><a href="../pricing/index.html" data-pl="Cennik" data-en="Pricing"
+            >Cennik</a
           ><a href="../download/index.html" data-pl="Pobierz" data-en="Download"
             >Pobierz</a
           >
@@ -155,7 +158,8 @@
             >Jak działa</a
           ><a href="../index.html#funkcje" data-pl="Funkcje" data-en="Features"
             >Funkcje</a
-          ><a href="index.html" data-pl="Cennik" data-en="Pricing">Cennik</a
+          ><a href="../pricing/index.html" data-pl="Cennik" data-en="Pricing"
+            >Cennik</a
           ><a href="../download/index.html" data-pl="Pobierz" data-en="Download"
             >Pobierz</a
           ><a
@@ -172,11 +176,7 @@
           <div>
             <a href="../help/index.html" data-pl="Pomoc" data-en="Help">Pomoc</a
             ><a href="https://github.com/zostaje">GitHub</a
-            ><a
-              href="../index.html#bezpieczenstwo"
-              data-pl="Bezpieczeństwo"
-              data-en="Security"
-              >Bezpieczeństwo</a
+            ><a href="index.html">Developers</a
             ><a
               href="mailto:demo@zostaje.app"
               data-pl="Kontakt"
@@ -195,83 +195,174 @@
     <main class="subpage-main" id="main">
       <section class="subpage-hero">
         <div class="container subpage-hero-copy">
-          <p class="subpage-kicker" data-pl="Cennik" data-en="Pricing">
-            Cennik
-          </p>
+          <p class="subpage-kicker">Developers</p>
           <h1
-            data-pl="Prosty cennik. Bez niespodzianek."
-            data-en="Simple pricing. No surprises."
+            data-pl="Buduj i testuj Zostaje razem z nami."
+            data-en="Build and test Zostaje with us."
           >
-            Prosty cennik. Bez niespodzianek.
+            Buduj i testuj Zostaje razem z nami.
           </h1>
           <p
             class="subpage-lead"
-            data-pl="Pierwsze zamknięte demo będzie bezpłatne. Finalne plany pokażemy przed publicznym startem, gdy zakres aplikacji będzie gotowy."
-            data-en="The first private demo will be free. Final plans will be announced before public launch, once the product scope is ready."
+            data-pl="To centrum technicznego kierunku projektu dla programistów, integratorów i testerów. Dokumentacja będzie rosnąć razem z publicznymi interfejsami Zostaje."
+            data-en="This is the technical project hub for developers, integrators and testers. Documentation will grow as Zostaje interfaces become public."
           >
-            Pierwsze zamknięte demo będzie bezpłatne. Finalne plany pokażemy
-            przed publicznym startem, gdy zakres aplikacji będzie gotowy.
+            To centrum technicznego kierunku projektu dla programistów,
+            integratorów i testerów. Dokumentacja będzie rosnąć razem z
+            publicznymi interfejsami Zostaje.
           </p>
+          <div class="subpage-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/zostaje"
+              data-pl="Zobacz GitHub"
+              data-en="View GitHub"
+              >Zobacz GitHub</a
+            ><a
+              class="text-link"
+              href="mailto:demo@zostaje.app"
+              data-pl="Zgłoś się do testów"
+              data-en="Join testing"
+              >Zgłoś się do testów</a
+            >
+          </div>
         </div>
       </section>
       <section class="subpage-content">
-        <div class="container pricing-page-grid">
-          <article class="pricing-page-card">
-            <span
-              class="pricing-status"
-              data-pl="Pierwsze demo"
-              data-en="First demo"
-              >Pierwsze demo</span
-            >
-            <p class="pricing-page-price">0 zł</p>
-            <p
-              data-pl="Przetestuj pierwszą wersję na iOS i pomóż zdecydować, co powinno powstać dalej."
-              data-en="Test the first iOS version and help decide what should be built next."
-            >
-              Przetestuj pierwszą wersję na iOS i pomóż zdecydować, co powinno
-              powstać dalej.
-            </p>
-            <ul class="pricing-page-list">
-              <li
-                data-pl="Dostęp do zamkniętego demo"
-                data-en="Access to the private demo"
-              >
-                Dostęp do zamkniętego demo
-              </li>
-              <li
-                data-pl="Możliwość przekazania opinii"
-                data-en="A direct way to share feedback"
-              >
-                Możliwość przekazania opinii
-              </li>
-              <li
-                data-pl="Informacje o kolejnych wydaniach"
-                data-en="Updates about future releases"
-              >
-                Informacje o kolejnych wydaniach
-              </li>
-            </ul>
-            <a
-              class="button button-primary"
-              href="../index.html#demo"
-              data-pl="Zapisz się na demo"
-              data-en="Join the demo"
-              >Zapisz się na demo</a
-            >
-          </article>
-          <article class="subpage-card">
-            <h2 data-pl="Co później?" data-en="What comes next?">
-              Co później?
+        <div class="container">
+          <p
+            class="developer-status"
+            data-pl="Projekt jest na wczesnym etapie. Publiczne API, MCP i narzędzia testowe opisane poniżej są planowanym kierunkiem, a nie gotową ofertą."
+            data-en="The project is at an early stage. The public API, MCP and testing tools described below are planned direction, not a finished offering."
+          >
+            Projekt jest na wczesnym etapie. Publiczne API, MCP i narzędzia
+            testowe opisane poniżej są planowanym kierunkiem, a nie gotową
+            ofertą.
+          </p>
+          <div class="help-section-heading">
+            <h2 data-pl="Dla programistów" data-en="For developers">
+              Dla programistów
             </h2>
             <p
-              data-pl="Płatne plany, limity i zakres funkcji nie zostały jeszcze ustalone. Opublikujemy je jasno przed rozpoczęciem sprzedaży — bez automatycznych opłat za udział w demie."
-              data-en="Paid plans, limits and feature scope have not been finalized. They will be published clearly before sales begin, with no automatic charge for joining the demo."
+              data-pl="Interfejsy mają pozwalać rozwijać integracje bez łączenia ich bezpośrednio z interfejsem aplikacji."
+              data-en="Interfaces are intended to support integrations without coupling them directly to the app UI."
             >
-              Płatne plany, limity i zakres funkcji nie zostały jeszcze
-              ustalone. Opublikujemy je jasno przed rozpoczęciem sprzedaży — bez
-              automatycznych opłat za udział w demie.
+              Interfejsy mają pozwalać rozwijać integracje bez łączenia ich
+              bezpośrednio z interfejsem aplikacji.
             </p>
-          </article>
+          </div>
+          <div class="help-grid">
+            <article class="help-card">
+              <h2 data-pl="Wspólny backend" data-en="Shared backend">
+                Wspólny backend
+              </h2>
+              <p
+                data-pl="Jedna logika danych i kont dla iOS, macOS i Windows. Kontrakty API zostaną opublikowane, gdy będą stabilne."
+                data-en="One data and account layer for iOS, macOS and Windows. API contracts will be published once stable."
+              >
+                Jedna logika danych i kont dla iOS, macOS i Windows. Kontrakty
+                API zostaną opublikowane, gdy będą stabilne.
+              </p>
+            </article>
+            <article class="help-card">
+              <h2>Publiczne MCP</h2>
+              <p
+                data-pl="Planowany serwer MCP ma dawać kompatybilnym asystentom dostęp wyłącznie do zakresu danych zatwierdzonego przez użytkownika."
+                data-en="The planned MCP server is intended to give compatible assistants access only to data scopes approved by the user."
+              >
+                Planowany serwer MCP ma dawać kompatybilnym asystentom dostęp
+                wyłącznie do zakresu danych zatwierdzonego przez użytkownika.
+              </p>
+            </article>
+            <article class="help-card">
+              <h2
+                data-pl="Integracje i automatyzacje"
+                data-en="Integrations and automations"
+              >
+                Integracje i automatyzacje
+              </h2>
+              <p
+                data-pl="Przyszłe integracje mają korzystać z udokumentowanych uprawnień, wersjonowanych kontraktów i możliwości cofnięcia dostępu."
+                data-en="Future integrations are intended to use documented permissions, versioned contracts and revocable access."
+              >
+                Przyszłe integracje mają korzystać z udokumentowanych uprawnień,
+                wersjonowanych kontraktów i możliwości cofnięcia dostępu.
+              </p>
+            </article>
+            <article class="help-card">
+              <h2 data-pl="Repozytoria publiczne" data-en="Public repositories">
+                Repozytoria publiczne
+              </h2>
+              <p
+                data-pl="Kod i dokumentacja przeznaczone do publicznego użycia będą rozwijane w organizacji Zostaje na GitHubie."
+                data-en="Code and documentation intended for public use will be developed in the Zostaje GitHub organization."
+              >
+                Kod i dokumentacja przeznaczone do publicznego użycia będą
+                rozwijane w organizacji Zostaje na GitHubie.
+              </p>
+            </article>
+          </div>
+          <div class="help-section-heading">
+            <h2 data-pl="Dla testerów" data-en="For testers">Dla testerów</h2>
+            <p
+              data-pl="Testy mają obejmować nie tylko błędy, lecz także zrozumiałość finansowych komunikatów i poczucie kontroli nad danymi."
+              data-en="Testing is intended to cover not only bugs but also clarity of financial messages and control over data."
+            >
+              Testy mają obejmować nie tylko błędy, lecz także zrozumiałość
+              finansowych komunikatów i poczucie kontroli nad danymi.
+            </p>
+          </div>
+          <div class="help-grid">
+            <article class="help-card">
+              <h2 data-pl="Wczesne wersje iOS" data-en="Early iOS builds">
+                Wczesne wersje iOS
+              </h2>
+              <p
+                data-pl="Pierwsi testerzy sprawdzą podstawowe przepływy, codzienny podgląd i sposób prezentowania bezpiecznej kwoty."
+                data-en="Early testers will evaluate core flows, the daily view and how the safe-to-spend amount is presented."
+              >
+                Pierwsi testerzy sprawdzą podstawowe przepływy, codzienny
+                podgląd i sposób prezentowania bezpiecznej kwoty.
+              </p>
+            </article>
+            <article class="help-card">
+              <h2 data-pl="Zgłoszenia błędów" data-en="Bug reports">
+                Zgłoszenia błędów
+              </h2>
+              <p
+                data-pl="Proces zgłoszeń i wymagany zakres informacji opublikujemy przed uruchomieniem testów. Na razie możesz zgłosić zainteresowanie e-mailem."
+                data-en="The reporting process and required details will be published before testing starts. For now, register interest by email."
+              >
+                Proces zgłoszeń i wymagany zakres informacji opublikujemy przed
+                uruchomieniem testów. Na razie możesz zgłosić zainteresowanie
+                e-mailem.
+              </p>
+            </article>
+            <article class="help-card">
+              <h2 data-pl="Testy prywatności" data-en="Privacy testing">
+                Testy prywatności
+              </h2>
+              <p
+                data-pl="Szczególną uwagę poświęcimy zgodom, ograniczeniom dostępu, usuwaniu danych i wycofywaniu integracji."
+                data-en="Special attention will go to consent, access limits, data deletion and integration revocation."
+              >
+                Szczególną uwagę poświęcimy zgodom, ograniczeniom dostępu,
+                usuwaniu danych i wycofywaniu integracji.
+              </p>
+            </article>
+            <article class="help-card">
+              <h2 data-pl="Informacja zwrotna" data-en="Product feedback">
+                Informacja zwrotna
+              </h2>
+              <p
+                data-pl="Testerzy będą mogli oceniać język, kolejność informacji i to, czy aplikacja rzeczywiście skraca czas potrzebny na finanse."
+                data-en="Testers will be able to assess language, information order and whether the app actually reduces time spent on finances."
+              >
+                Testerzy będą mogli oceniać język, kolejność informacji i to,
+                czy aplikacja rzeczywiście skraca czas potrzebny na finanse.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -302,7 +393,7 @@
                 data-ai="chatgpt"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                ><svg viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="9"></circle>
                   <path d="M8 9.2 12 7l4 2.2v5.2L12 17l-4-2.6Z"></path></svg
                 ><span
@@ -313,15 +404,13 @@
                     >Pełny opis projektu</small
                   ></span
                 ></a
-              >
-              <a
+              ><a
                 href="https://claude.ai/new"
                 data-ai="claude"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3 4.5 19h15Z"></path>
-                  <path d="M9.2 14h5.6"></path></svg
+                ><svg viewBox="0 0 24 24">
+                  <path d="M12 3 4.5 19h15Z"></path></svg
                 ><span
                   ><strong>Claude</strong
                   ><small
@@ -330,13 +419,12 @@
                     >Analiza z referencjami</small
                   ></span
                 ></a
-              >
-              <a
+              ><a
                 href="https://gemini.google.com/app"
                 data-ai="gemini"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                ><svg viewBox="0 0 24 24">
                   <path
                     d="M12 2c.8 5.7 4.3 9.2 10 10-5.7.8-9.2 4.3-10 10-.8-5.7-4.3-9.2-10-10 5.7-.8 9.2-4.3 10-10Z"
                   ></path></svg
@@ -387,7 +475,11 @@
                 data-pl="Jak działa"
                 data-en="How it works"
                 >Jak działa</a
-              ><a href="index.html" data-pl="Cennik" data-en="Pricing">Cennik</a
+              ><a
+                href="../pricing/index.html"
+                data-pl="Cennik"
+                data-en="Pricing"
+                >Cennik</a
               ><a
                 href="../download/index.html"
                 data-pl="Pobierz"
@@ -396,27 +488,23 @@
               >
             </nav>
             <nav aria-label="Platformy">
-              <strong data-pl="Platformy" data-en="Platforms">Platformy</strong>
-              <span data-pl="iOS · w budowie" data-en="iOS · in development"
+              <strong data-pl="Platformy" data-en="Platforms">Platformy</strong
+              ><span data-pl="iOS · w budowie" data-en="iOS · in development"
                 >iOS · w budowie</span
-              >
-              <span data-pl="macOS · planowane" data-en="macOS · planned"
+              ><span data-pl="macOS · planowane" data-en="macOS · planned"
                 >macOS · planowane</span
-              >
-              <span data-pl="Windows · planowane" data-en="Windows · planned"
+              ><span data-pl="Windows · planowane" data-en="Windows · planned"
                 >Windows · planowane</span
               >
             </nav>
           </div>
           <div>
             <nav aria-label="Projekt">
-              <strong data-pl="Projekt" data-en="Project">Projekt</strong>
-              <a href="https://github.com/zostaje">GitHub</a>
-              <a href="../developers/index.html">Developers</a>
-              <a href="../index.html#demo" data-pl="Demo" data-en="Demo"
-                >Demo</a
-              >
-              <a
+              <strong data-pl="Projekt" data-en="Project">Projekt</strong
+              ><a href="https://github.com/zostaje">GitHub</a
+              ><a href="index.html">Developers</a
+              ><a href="../index.html#demo">Demo</a
+              ><a
                 href="../index.html#bezpieczenstwo"
                 data-pl="Bezpieczeństwo"
                 data-en="Security"
@@ -426,12 +514,10 @@
             <nav aria-label="Technologia">
               <strong data-pl="Technologia" data-en="Technology"
                 >Technologia</strong
-              >
-              <span>Swift</span>
-              <span data-pl="Wspólny backend" data-en="Shared backend"
+              ><span>Swift</span
+              ><span data-pl="Wspólny backend" data-en="Shared backend"
                 >Wspólny backend</span
-              >
-              <span
+              ><span
                 data-pl="Publiczne MCP · planowane"
                 data-en="Public MCP · planned"
                 >Publiczne MCP · planowane</span
@@ -447,17 +533,14 @@
             <nav aria-label="Informacje">
               <strong data-pl="Informacje" data-en="Information"
                 >Informacje</strong
-              >
-              <a href="../help/index.html" data-pl="Pomoc" data-en="Help"
+              ><a href="../help/index.html" data-pl="Pomoc" data-en="Help"
                 >Pomoc</a
-              >
-              <a
+              ><a
                 href="../index.html#demo"
                 data-pl="Zamknięte demo"
                 data-en="Private demo"
                 >Zamknięte demo</a
-              >
-              <a
+              ><a
                 href="../index.html#bezpieczenstwo"
                 data-pl="Prywatność danych"
                 data-en="Data privacy"

@@ -1842,7 +1842,27 @@ body.menu-open {
   text-align: center;
 }
 .subpage-footer {
-  border-top: 1px solid var(--line);
+  border-top: 0;
+}
+.help-section-heading {
+  max-width: 720px;
+  margin: 72px 0 28px;
+}
+.help-section-heading h2 {
+  margin-bottom: 14px;
+}
+.help-section-heading p {
+  color: var(--text-secondary);
+}
+.developer-status {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+  text-align: center;
 }
 @media (max-width: 767px) {
   .subpage-hero {
